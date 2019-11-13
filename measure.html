@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<title>Measure</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css">
+<!-- load theme file for your application -->
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/utils/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<!-- Measure Mood page -->
+	<div class="ui-page ui-page-active" id="measure">
+		<!-- Header to display title of page -->
+		<header role="header" style="height: 50px;" class="ui-header">
+			<h3 class="ui-title"
+				style="margin: 0px; padding-bottom: 10px; line-height: 20px;"
+				id="measure-header-message">Detected Mood</h3>
+		</header>
+		<div class="ui-content ui-content-padding"
+			style="margin-bottom: 0px; padding-bottom: 0px;">
+			<div id="measure_wrapper">
+				<span class="text-message">Is this accurate?</span> <span
+					class="text-message" id="test">Measuring...</span>
+				<!-- This div encapsulates the table containing the check button, mood smiley icon, and cross button -->
+				<div style="margin: 10px;">
+					<table class="table-measure">
+						<tbody>
+							<tr>
+								<!-- Check button that takes user back to previous page -->
+								<!-- To be pressed when user is satisfied with the mood detected by the app -->
+								<td><a class="ui-btn" data-role="button" onclick="navBack()"
+									style="margin: 0px; padding: 0px;"><img
+										src="css/images/check_icon.png" alt="YES" width="48px"
+										height="48px" style="float: right;"></a></td>
+								<!-- Smiley icon that enables the user to know what mood was detected by the app -->
+								<td><img id="measure_smiley" alt="HAPPY"
+									height="110px" width="110px"
+									style="margin-left: 30px; margin-right: 30px;"></td>
+								<!-- Cross button that measures mood again and reloads page with the new detected mood -->
+								<!-- To be pressed when user is not satisfied with the detected mood -->
+								<td><img src="css/images/cross_icon.png" alt="NO"
+									width="48px" height="48px" style="float: left;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+				<!-- Display text that enables the user to know what mood was detected by the app -->
+				<span class="text-mood" id="mood_text">...</span>
+				<div class="ui-footer" role="footer"></div>
+			</div>
+			<div id="measuring_wrapper">
+				Measuring...
+			</div>
+		</div>
+	</div>
+
+	<!-- Built in Scripts -->	
+	<script src="lib/tau/wearable/js/tau.min.js"></script>
+	<script src="js/utils/circle-helper.js"></script>
+	<script src="js/utils/lowBatteryCheck.js"></script>
+	
+	<!-- Custom Scripts -->	
+	<script src="js/utils/jquery-3.4.1.min.js"></script>
+	<script src="js/global_scripts.js"></script>
+	<script src="js/measure_scripts.js"></script>
+		
+</body>
+</html>

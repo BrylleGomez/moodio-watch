@@ -1,0 +1,269 @@
+/* ~~~~~~~~~~~~ Global Styles ~~~~~~~~~~~~ */
+.text-message {
+	color: #f7f7f7;
+	font-size: 16px;
+}
+
+/* ~~~~~~~~~~~~ launcher.html (Display Mood section) ~~~~~~~~~~~~ */
+#text-greeting {
+	color: #edaa00;
+	font-size: 28px;
+}
+
+/* ~~~~~~~~~~~~ launcher.html (Music Player section) ~~~~~~~~~~~~ */
+* {
+	font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+#div_songtitle {
+	font-size: 28px;
+	padding: 5px;
+	font-weight: bolder; 
+}
+
+#div_playlist {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#more-option-button {
+	z-index: 1;
+}
+
+#music_player_content {
+	margin: 0;
+}
+
+#music_player_header {
+	height: 0px;
+}
+
+#div_background {
+	position: absolute;
+	width: 360px;
+	height: 360px;
+	background-image: url('../css/images/music/music_no_album_art.png');
+	background-size: 100% 100%;
+	transition: all 0.5s ease-out;
+	opacity: 0.5;
+}
+
+.btn {
+	border-radius: 50%;
+}
+
+.btn:active {
+	background-color: rgba(250, 250, 250, 0.4);
+	transition: all 0.2s ease;
+}
+
+#div_now_playing {
+	position: absolute;
+	width: 360px;
+	height: 360px;
+}
+
+#div_volume {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 155px;
+	top: 43px;
+}
+
+.volume {
+	background-image:
+		url('../css/images/music/Controller/music_top_button_icon_volume.png');
+	opacity: 0.5;
+}
+
+.mute {
+	background-image:
+		url('../css/images/music/Controller/music_top_button_icon_mute.png');
+}
+
+#div_progress {
+	position: absolute;
+	width: 110px;
+	height: 110px;
+	left: 125px;
+	top: 125px;
+	-webkit-mask-image: url(../css/images/music/Controller/b_music_progress_bg.png);
+	-webkit-mask-size: 100% 100%;
+	background-color: rgba(0, 87, 107, 1);
+	-webkit-mask-repeat: no-repeat;
+}
+
+#div_play {
+	position: absolute;
+	width: 96px;
+	height: 96px;
+	left: 132px;
+	top: 140px;
+}
+
+.play {
+	background-image:
+		url('../css/images/music/Controller/music_controller_btn_play.png');
+}
+
+.pause {
+	background-image:
+		url('../css/images/music/Controller/music_controller_btn_pause.png');
+}
+
+#div_prev {
+	position: absolute;
+	width: 66px;
+	height: 66px;
+	left: 40px;
+	top: 160px;
+	background-image:
+		url('../css/images/music/Controller/music_controller_btn_prev.png');
+}
+
+#div_next {
+	position: absolute;
+	width: 66px;
+	height: 66px;
+	left: 254px;
+	top: 160px;
+	background-image:
+		url('../css/images/music/Controller/music_controller_btn_next.png');
+}
+
+#div_device {
+	position: relative;
+	width: 42px;
+	height: 47px;
+	left: 30px;
+	top: 234px;
+}
+
+.mobile {
+	background-image: url('../css/images/music/Controller/music_device.png');
+}
+
+.gear {
+	background-image: url('../css/images/music/Controller/music_gear.png');
+}
+
+#div_title {
+	position: absolute;
+	width: 258px;
+	height: 47px;
+	left: 72px;
+	top: 234px;
+	line-height: 47px;
+	text-align: center;
+	font-size: 36px;
+	color: white;
+	overflow: hidden;
+}
+
+#div_sub_title {
+	position: absolute;
+	width: 228px;
+	height: 37px;
+	line-height: 37px;
+	top: 281px;
+	left: 66px;
+	font-size: 28px;
+	text-align: center;
+	color: white;
+}
+
+/*
+* more options icon set
+*/
+.ui-item.ui-item-active::before {
+	background-color: #3261ba;
+}
+
+.device-gear::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image:
+		url(../css/images/music/More_option/music_more_opt_select_device_gear.png);
+	-webkit-mask-size: 100% 100%;
+	background-color: rgb(89, 88, 91);
+	-webkit-mask-repeat: no-repeat;
+	display: block;
+}
+
+.device-mobile::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image:
+		url(../css/images/music/More_option/music_more_opt_select_device_mobile.png);
+	-webkit-mask-size: 100% 100%;
+	background-color: rgb(89, 88, 91);
+	-webkit-mask-repeat: no-repeat;
+	display: block;
+}
+
+/* ~~~~~~~~~~~~ dashboard.html ~~~~~~~~~~~~ */
+#dashboard-header-message {
+	color: #34dbeb;
+	font-size: 20px;
+}
+
+table.table-dashboard {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table.table-mood td {
+	padding: 0px 0px;
+}
+
+td#td-left-1, td#td-left-2 {
+	width: 50%;
+}
+
+td#td-left-1 {
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+td#td-left-2 {
+	font-size: 28px;
+}
+
+td.menu-icon {
+	width: 25%;
+}
+
+td.menu-text {
+	font-size: 28px;
+}
+
+/* ~~~~~~~~~~~~ measure.html ~~~~~~~~~~~~ */
+#measure-header-message {
+	color: #ffffff;
+	font-size: 22px;
+}
+
+#text-mood {
+	color: #ffffff;
+	font-size: 28px;
+}
+
+table.table-measure {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+td.td-50p {
+	width: 50%;
+}

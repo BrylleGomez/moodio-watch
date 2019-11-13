@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/MoodioWatch" version="1.0.0" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="IcmGu2zK7R.MoodioWatch" package="IcmGu2zK7R" required_version="4.0"/>
+    <author>Brylle Gomez, Danayal Khan, Mohamed Mansour, Karam Ahfid</author>
+    <content src="launcher.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="yay.png"/>
+    <name>Mood.io</name>
+    <tizen:privilege name="http://tizen.org/privilege/content.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:profile name="wearable"/>
+</widget>

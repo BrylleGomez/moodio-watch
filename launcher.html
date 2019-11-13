@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<title>Launcher</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css">
+<!-- load theme file for your application -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<!-- Launcher page -->
+	<div id="main" class="ui-page ui-page-active">
+		<div id="pageIndicator" class="ui-page-indicator"
+			style="margin-top: 10px; z-index: 999;"></div>
+		<div id="hsectionchanger" class="ui-content ui-scroller">
+			<div>
+				<!-- Section 1: Display Mood -->
+				<section class="ui-section-active" style="text-align: center">
+					<header class="ui-header"
+						style="margin-top: 0px; margin-bottom: 0px; height: 80px;">
+						<!-- This header contains the greeting with the user's name -->
+						<h3 id="text-greeting" style="padding: 0px; margin: 0px;">Hello, Dr. Imran.</h3>
+					</header>
+					<div class="ui-content ui-content-padding"
+						style="padding-top: 24px;">
+						<!-- This anchor block contains the clickable smiley image -->
+						<!-- When clicked, app navigates to the Dashboard page -->
+						<img id="launcher_smiley" alt="HAPPY" height="156px" width="156px">
+						 <br>
+						<!-- This span contains the custom tip/message from the app -->
+						<span class="text-message" id="laucher_message">Loading...</span>
+					</div>
+				</section>
+				<!-- Section 2: Play Music -->
+				<section style="text-align: center">
+					<div id="music_player_page" class="ui-page ui-page-active">
+
+						<div id="music_player_content" class="ui-content content-padding">
+
+							<div id="div_background"></div>
+							<div id="div_now_playing">
+								<div id="div_play" class="play btn">
+									<audio id="myaudio"></audio>
+								</div>
+								<div id="div_title"></div>
+								<br>
+								<div class="text-message" style="line-height: 2rem;">
+									<div id="div_artistname">Katy Perry</div>
+									<div id="div_songtitle">Hot &amp; Cold</div>
+									<div id="div_prev" class="btn"></div>
+									<div id="div_next" class="btn"></div>
+									<div id="div_device" class="gear"></div>
+									<div id="div_feedback" style="margin-top: 80px;">
+										<div class="text-message">Suits your mood?</div>
+										<div style="margin: 10px;">
+											<table class="table-measure">
+												<tbody>
+													<tr>
+														<td style="padding-right: 15px; width: 50%;"><img class="dismissFeedback"
+															src="css/images/check_icon.png" alt="YES" width="40px"
+															height="40px"
+															style="float: right;"></td>
+
+														<td style="padding-left: 15px; width: 50%;"><img class="dismissFeedback"
+															src="css/images/cross_icon.png" alt="NO" width="40px"
+															height="40px"
+															style="float: left;"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div id="div_playlist" style="display: block; margin-top: 115px;">Uplifting Playlist</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<!-- Built in Scripts -->	
+	<script src="lib/tau/wearable/js/tau.min.js"></script>
+	<script src="js/utils/circle-helper.js"></script>
+	<script src="js/utils/lowBatteryCheck.js"></script>
+	<!-- <script src="js/playmusic/getcontent.js"></script> -->
+	<!-- <script src="js/playmusic/moreoptions.js"></script> -->
+	
+	<!-- Custom Scripts -->	
+	<script src="js/utils/jquery-3.4.1.min.js"></script>
+	<script src="js/global_scripts.js"></script>
+	<script src="js/launcher_scripts.js"></script>
+	<script src="js/playmusic/playmusic.js"></script>
+	
+</body>
+</html>
