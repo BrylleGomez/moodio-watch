@@ -2,8 +2,11 @@
 /////* ~~~~~~~~~~~~~~ Global Variables and Functions ~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
-var uid = null;
 
+///////////////////////////// GLOBAL VARIABLES //////////////////////////////
+
+// Global user variable
+var uid = null;
 
 // Enum to store different mood values
 const mood = {
@@ -12,27 +15,21 @@ const mood = {
 	ANGRY : 'angry'
 };
 
-// Initialize variable to store current user mood
-var current_mood;
+// Global mood variable
 current_mood = mood.HAPPY; // initialize current mood to HAPPY
-console.log(current_mood); // debugging
+console.log("Initial mood: " + current_mood); // debugging
 
-//// function dismisses the "div_feedback" message in the Music Player page 
-//function dismissFeedback() {
-//	var elem = document.getElementById("div_feedback");
-//	elem.parentNode.removeChild(elem);
-//}
+/////////////////////////////////////////////////////////////////////////////
 
-// Dismiss feedback messages
-$(".dismissFeedback").click(function(){
-	  $("#div_feedback").hide();
-});
 
-// Go back to previous page
+///////////////////////////// GLOBAL FUNCTIONS //////////////////////////////
+
+//Go back to previous page
 function navBack() {
 	tau.back();	// navigate to previous page
 }
 
+// Update global mood variable
 function updateMood(receivedMood) {
 	console.log('Received mood is ' + receivedMood);
 	switch(receivedMood) {
@@ -48,5 +45,7 @@ function updateMood(receivedMood) {
 	default: // default is happy
 		current_mood = mood.HAPPY;
 	}
-	console.log(current_mood);
+	//console.log(current_mood);
 }
+
+/////////////////////////////////////////////////////////////////////////////

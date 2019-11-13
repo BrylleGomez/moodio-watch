@@ -2,21 +2,11 @@
 /////* ~~~~~~~~~~~~~~~~~~ Scripts for launcher.html ~~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
-
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
 window.onload = init();
 	
 function init() {	// begin window.onload 
-	
-	// test login
-	var creds = {
-		username: "Mansour",
-		password: "12345678"
-	}
-	$.post("http://192.168.43.18:3004/loginwatch", creds, function(data, status) {
-		console.log("Login Status: " + data);
-	});
 	
 	// Debug
 	console.log("Starting LAUNCHER scripts!");
@@ -120,6 +110,9 @@ $("#div_playlist").click(function(){
 
 ///////////////////////// HELPER/CALLBACK FUNCTIONS /////////////////////////
 
-;
+//Dismiss feedback message
+$(".dismissFeedback").click(function(){
+	  $("#div_feedback").hide();
+});
 
 /////////////////////////////////////////////////////////////////////////////

@@ -2,6 +2,9 @@
 /////* ~~~~~~~~~~~~~~~~~~~ Scripts for measure.html ~~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
+var server_ip = "http://192.168.43.154";
+var server_port = "3000";
+var route_sendval = "/sendHRM";
 
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
@@ -9,19 +12,57 @@ window.onload = init();
 	
 function init() {	// begin window.onload 
 
-	console.log("Measure.html screen loaded!");
+	// Debug
+	console.log("Starting MEASURE scripts!");
+	
+	// Attach back key listener
+	window.addEventListener("tizenhwkey", function(ev) {
+		var activePopup = null, page = null, pageId = "";
+		if (ev.keyName === "back") {
+			activePopup = document.querySelector(".ui-popup-active");
+			page = document.getElementsByClassName("ui-page-active")[0];
+			pageId = page ? page.id : "";
+			if (pageId === "main" && !activePopup) {
+				try {
+					console.log("Exiting app!");
+					tizen.application.getCurrentApplication().exit();
+				} catch (ignore) {
+				}
+			} else {
+				console.log("Back key pressed!");
+				window.history.back();
+			}
+		}
+	});
+	
+	// Show measuring text
 	$("#measure_wrapper").hide();
 	$("#measuring_wrapper").show();
 		
-	/* --------------------------- Heart Rate Monitor Code --------------------------- */
+	/* ----------------------- Heart Rate Monitor and Light Code ----------------------- */
 	
 	var counter = 0;
 	var hrReadings = [];	// array to contain 20 heart rate readings
+	var luxReadings = [];	// array to contain 20 heart rate readings
 	tizen.ppm.requestPermission("http://tizen.org/privilege/healthinfo",
 			onSuccessPermission, onErrorPermission);
+	var lightSensor = tizen.sensorservice.getDefaultSensor('LIGHT');
+	var luxReading = 0;		// variable to store light level reading
 
+	function onSuccessLight() {
+	    console.log('light sensor started');	// debug
+	    lightSensor.getLightSensorData(onGetLightSuccess);
+	    // lightSensor.stop();
+	}
+	
+	function onGetLightSuccess(sensorData) {
+	    console.log('light level: ' + sensorData.lightLevel); 	// debug
+	    luxReading = sensorData.lightLevel;
+	}
+	
 	function onSuccessPermission() {
 		tizen.humanactivitymonitor.start('HRM', onChangedHRM);
+		lightSensor.start(onSuccessLight);
 	}
 
 	function onErrorPermission() {
@@ -30,28 +71,49 @@ function init() {	// begin window.onload
 
 	function onChangedHRM(hrmInfo) {
 		var heartRate = hrmInfo.heartRate;		// retrieve heart rate from HRM
+		var rrInterval = hrmInfo.rRInterval;	// retrieve heart rate variability from HRM
 		console.log('Heart Rate: ' + heartRate);	// debug
+		console.log('Peak-to-peak interval: ' + hrmInfo.rRInterval + ' milliseconds');
 		if (heartRate > 25) {
 			hrReadings.push(heartRate);		// if detected valid heart rate value, push to heart rate values array
 			counter++;
 		}
-		$("#test").text(hrmInfo.heartRate);	// test
 	    if (counter > 20) {		// after 20 valid readings, stop reading and send heart rate to server
 	    	tizen.humanactivitymonitor.stop('HRM');		// stop HRM
-	    	sendHeartRate();							// send to server
+	    	
+	    	sendSensorVals();							// send to server
 	    }
 	}
 
-	function sendHeartRate() {
-		function getSum(total, num) { return total + num;} 
-		var avg = hrReadings.reduce(getSum) / hrReadings.length;
-        console.log('Sending heartrate: ' + avg);
-        $.post("http://192.168.1.104:3000/testpost", {
-        	heartrate: avg.toString()
+//	function sendSensorVals() {
+//		function getSum(total, num) { return total + num;} 			// sum all heartrate readings
+//		var avg = hrReadings.reduce(getSum) / hrReadings.length;	// get avg of heartrate readings
+//        console.log('Sending heartrate: ' + avg);					// debug
+//        $.post(server_ip + ":" + server_port + route_sendval, {		// post sensor values to server via jQuery post
+//        	heartrate: avg.toString(),								// HR value
+//        	lightlevel: luxReading.toString()						// lux value
+//		}, function(data, status) {
+//			console.log("Response from server: " + data);			// test
+//			updateMood(data)										// update global variable with mood retrieved from server
+//			updateUI();												// update UI due to mood change
+//			// show detected mood and hide "measuring"
+//			$("#measuring_wrapper").hide();
+//			$("#measure_wrapper").show();
+//		});
+//	}
+	
+	function sendSensorVals() {
+		function getSum(total, num) { return total + num;} 			// sum all heartrate readings
+		var avg = hrReadings.reduce(getSum) / hrReadings.length;	// get avg of heartrate readings
+        console.log('Sending heartrate: ' + avg);					// debug
+        $.get(server_ip + ":" + server_port + route_sendval, {		// post sensor values to server via jQuery post
+        	heartrate: avg.toString(),								// HR value
+        	lightlevel: luxReading.toString()						// lux value
 		}, function(data, status) {
-			console.log("Data: " + data + "\nStatus: " + status);	// test
-			updateMood(data)	// data.mood can be happy, sad, or angry
-			updateUI();
+			console.log("Response from server: " + data);			// test
+			updateMood(data)										// update global variable with mood retrieved from server
+			updateUI();												// update UI due to mood change
+			// show detected mood and hide "measuring"
 			$("#measuring_wrapper").hide();
 			$("#measure_wrapper").show();
 		});

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<title>Login</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css">
+<!-- load theme file for your application -->
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/utils/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<!-- Measure Mood page -->
+	<div class="ui-page ui-page-active" id="main">
+		<!-- Header to display title of page -->
+		<header role="header" style="height: 50px;" class="ui-header">
+			<h3 class="ui-title"
+				style="margin: 0px; padding-bottom: 10px; line-height: 20px;"
+				id="text-greeting">Mood.io Login</h3>
+		</header>
+		<div class="ui-content ui-content-padding"
+			style="margin-bottom: 0px; padding-bottom: 0px;">
+			<form id="login_form" action="" method="post">
+				Email: <input type="text" id="login_username"></input> 
+				Password: <input type="password" id="login_password"></input>
+			</form>
+			<button id="login_button">Login</button>
+		</div>
+	</div>
+
+	<!-- Built in Scripts -->
+	<script src="lib/tau/wearable/js/tau.min.js"></script>
+	<script src="js/utils/circle-helper.js"></script>
+	<script src="js/utils/lowBatteryCheck.js"></script>
+
+	<!-- Custom Scripts -->
+	<script src="js/utils/jquery-3.4.1.min.js"></script>
+	<script src="js/login_scripts.js"></script>
+
+</body>
+</html>

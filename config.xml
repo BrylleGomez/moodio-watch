@@ -3,7 +3,7 @@
     <access origin="*" subdomains="true"></access>
     <tizen:application id="IcmGu2zK7R.MoodioWatch" package="IcmGu2zK7R" required_version="4.0"/>
     <author>Brylle Gomez, Danayal Khan, Mohamed Mansour, Karam Ahfid</author>
-    <content src="launcher.html"/>
+    <content src="login.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="yay.png"/>
     <name>Mood.io</name>
