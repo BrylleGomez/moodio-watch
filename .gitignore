@@ -2,7 +2,7 @@
 /.checkers
 /.rds_delta
 /.sdk_delta.info
-/.sign
+/.sign/*
 /crash-info/
 /res/res.xml
 /vlc/
@@ -16,4 +16,8 @@
 *.tmp
 *~
 res/edje/*.edj
-MoodioWatch.wgt
+.settings
+.build*
+*signature*.xml
+*.wgt
+.*_delta*
