@@ -3,8 +3,8 @@
 /////////////////////////////////////////////////////////////////////////////
 
 var server_ip = "http://192.168.43.154";
-var server_port = "3000";
-var route_sendval = "/sendHRM";
+var server_port = "3004";
+var route_sendval = "/addsensors";
 
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
@@ -106,9 +106,9 @@ function init() {	// begin window.onload
 		function getSum(total, num) { return total + num;} 			// sum all heartrate readings
 		var avg = hrReadings.reduce(getSum) / hrReadings.length;	// get avg of heartrate readings
         console.log('Sending heartrate: ' + avg);					// debug
-        $.get(server_ip + ":" + server_port + route_sendval, {		// post sensor values to server via jQuery post
-        	heartrate: avg.toString(),								// HR value
-        	lightlevel: luxReading.toString()						// lux value
+        $.post(server_ip + ":" + server_port + route_sendval, {		// post sensor values to server via jQuery post
+        	hrm: avg.toString(),								// HR value
+        	light: luxReading.toString()						// lux value
 		}, function(data, status) {
 			console.log("Response from server: " + data);			// test
 			updateMood(data)										// update global variable with mood retrieved from server

