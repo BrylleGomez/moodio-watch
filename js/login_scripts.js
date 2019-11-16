@@ -2,7 +2,7 @@
 /////* ~~~~~~~~~~~~~~~~~~~~ Scripts for login.html ~~~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
-var server_ip = "http://192.168.43.154";
+var server_ip = "http://192.168.43.151";
 var server_port = "3004";
 var route_sendcreds = "/loginwatch";
 
