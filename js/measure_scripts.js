@@ -111,7 +111,7 @@ function init() {	// begin window.onload
         	"light": luxReading.toString()						// lux value
 		}, function(data, status) {
 			console.log("Response from server: " + data);			// test
-			updateMood(data)										// update global variable with mood retrieved from server
+			updateMood(data);										// update global variable with mood retrieved from server
 			updateUI();												// update UI due to mood change
 			// show detected mood and hide "measuring"
 			$("#measuring_wrapper").hide();
