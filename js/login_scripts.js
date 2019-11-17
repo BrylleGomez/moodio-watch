@@ -2,10 +2,6 @@
 /////* ~~~~~~~~~~~~~~~~~~~~ Scripts for login.html ~~~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
-var server_ip = "http://192.168.43.151";
-var server_port = "3004";
-var route_sendcreds = "/loginwatch";
-
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
 window.onload = init();
@@ -44,9 +40,29 @@ function init() {	// begin window.onload
 
 $("#login_button").click(function(){
 	
+//	// login
+//	var user = $("#login_username").val().toString();
+//	var pass = $("#login_password").val().toString();
+//	console.log("Username: " + user);
+//	console.log("Password: " + pass);
+//	var creds = {
+//		username: user,
+//		password: pass
+//	}
+//	$.post(server_ip + ":" + server_port + route_sendcreds, creds, function(data, status) {
+//		console.log("Login Status: " + data);
+//		if(data) {
+//			window.location.pathname = '/launcher.html';
+//			alert("Login success!");
+//		} else {
+//			window.location.pathname = '/login.html';
+//			alert("Login failed!");
+//		}
+//	});
+	
 	// test login
-	var user = $("#login_username").val().toString();
-	var pass = $("#login_password").val().toString();
+	var user = "Mansour";
+	var pass = "12345678"
 	console.log("Username: " + user);
 	console.log("Password: " + pass);
 	var creds = {
@@ -62,8 +78,7 @@ $("#login_button").click(function(){
 			window.location.pathname = '/login.html';
 			alert("Login failed!");
 		}
-	});
-	
+	});	
 	
 });
 

@@ -5,6 +5,13 @@
 
 ///////////////////////////// GLOBAL VARIABLES //////////////////////////////
 
+// Server IP, port, and routes
+server_ip = "http://192.168.43.151";
+server_port = "3004";
+route_sendcreds = "/loginwatch";
+route_reqmood = "/mood";
+route_sendval = "/addsensors";
+
 // Global user variable
 var uid = null;
 
@@ -18,6 +25,14 @@ const mood = {
 // Global mood variable
 current_mood = mood.HAPPY; // initialize current mood to HAPPY
 console.log("Initial mood: " + current_mood); // debugging
+
+// Global Music Variable
+const musicinfo = {
+		ARTISTNAME : 'Happy Artist',
+		SONGTITLE : 'Happy Song',
+		PLAYLIST : 'Happy Playlist'
+			
+};
 
 /////////////////////////////////////////////////////////////////////////////
 

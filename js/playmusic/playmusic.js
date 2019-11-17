@@ -14,13 +14,6 @@
  *      limitations under the License.
  */
 
-/*global tau, getcontent */
-
-/* exported app */
-
-/**
- * App.js controls music play and the main page display, including changes in the title of music and the background image.
- */
 var app =
 (function() {
     var app = {},
@@ -36,7 +29,7 @@ var app =
         TITLE_BT_DISCONNECTED = "BT disconnected",
         BACKGROUND_IMAGE_NO_ALBUM = "css/images/music/music_no_album_art.png";
    
-    	updateUI();
+    
     	
 //    <div id="div_title"></div>
 //    <div id="div_artistname"></div>
@@ -392,29 +385,36 @@ var app =
      */
     
     function updateUI() {
-		
+
+    	var artist_name = "";
+    	var song_title = "";
+    	var playlist_name = "";
     	switch(current_mood) {
 		case mood.HAPPY:
-			ARTISTNAME = "Happy Artist";
-			SONGTITLE = "Happy Song";
-	    	PLAYLIST = "Happy Playlist"
+			artist_name = "Happy Artist";
+			song_title = "Happy Song";
+			playlist_name = "Happy Playlist"
 
 			break;
 		case mood.SAD:
-			ARTISTNAME = "Sad Artist";
-			SONGTITLE = "Sad Song";
-	    	PLAYLIST = "Sad Playlist"
+			artist_name = "Sad Artist";
+			song_title = "Sad Song";
+			playlist_name = "Sad Playlist"
 			break;
 		case mood.ANGRY:
-			ARTISTNAME = "Angry Artist";
-			SONGTITLE = "Angry Song";
-	    	PLAYLIST = "Angry Playlist"
+			artist_name = "Angry Artist";
+			song_title = "Angry Song";
+			playlist_name = "Angry Playlist"
 			break;
 		default: // default is happy
-			ARTISTNAME = "Happy Artist";
-			SONGTITLE = "Happy Song";
-	    	PLAYLIST = "Happy Playlist"			
+			artist_name = "Happy Artist";
+			song_title = "Happy Song";
+			playlist_name = "Happy Playlist"			
     	}
+    	
+    	$("#div_artistname").text(artist_name);
+    	$("#div_songtitle").text(song_title);
+    	$("#div_playlist").text(playlist_name);
 		
 	}
     
@@ -422,6 +422,14 @@ var app =
         globalPage = "main"; // Current page is "main" page.
         deviceStatus = "Device Gear"; // At first, device status is "gear" status.
         bindEvents();
+     // Fetch mood
+    	$.post(server_ip + ":" + server_port + route_reqmood, {		// post sensor values to server via jQuery post
+        	"message": "moodreq"
+    	}, function(data, status) {
+    		console.log("Response from server: " + data);			// test
+    		updateMood(data)										// update global variable with mood retrieved from server
+    		updateUI();												// update UI due to mood change
+    	});
         // getcontent.refreshMusics();	// REMOVED FOR TESTING
         // initGetMusic();				// REMOVED FOR TESTING
     }
