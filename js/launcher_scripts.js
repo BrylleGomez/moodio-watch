@@ -4,10 +4,6 @@
 
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
-var server_ip = "http://192.168.43.151";
-var server_port = "3004";
-var route_reqmood = "/mood";
-
 window.onload = init();
 	
 function init() {	// begin window.onload 

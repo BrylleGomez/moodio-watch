@@ -2,10 +2,6 @@
 /////* ~~~~~~~~~~~~~~~~~~~ Scripts for measure.html ~~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
-var server_ip = "http://192.168.43.151";
-var server_port = "3004";
-var route_sendval = "/addsensors";
-
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
 window.onload = init();
@@ -39,7 +35,7 @@ function init() {	// begin window.onload
 	$("#measure_wrapper").hide();
 	$("#measuring_wrapper").show();
 		
-	/* ----------------------- Heart Rate Monitor and Light Code ----------------------- */
+	/* ----------------------- Heart Rate Monitor, Light, and Temperature Code ----------------------- */
 	
 	var counter = 0;
 	var hrReadings = [];	// array to contain 20 heart rate readings
