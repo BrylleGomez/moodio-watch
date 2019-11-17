@@ -35,11 +35,8 @@ var app =
         TITLE_NO_TRACK = "Now Playing",
         TITLE_BT_DISCONNECTED = "BT disconnected",
         BACKGROUND_IMAGE_NO_ALBUM = "css/images/music/music_no_album_art.png";
-    	SONGTITLE = "Hot & Cold";
-    	ARTISTNAME = "Katy Perry";
-    	PLAYLIST = "Uplifting Playlist"
-    	
-    		
+   
+    	updateUI();
     	
 //    <div id="div_title"></div>
 //    <div id="div_artistname"></div>
@@ -259,7 +256,7 @@ var app =
      */
     function changeDeviceMobile() {
         changeHtmlString("div_title", "Now Playing");
-        changeHtmlString("div_sub_title", "Katy Perry");
+        changeHtmlString("div_sub_title", ARTISTNAME);
         changeBackgroundImage("div_background", BACKGROUND_IMAGE_NO_ALBUM);
 
         // Music stops.
@@ -393,6 +390,34 @@ var app =
      * call refreshMusics function of getcontent for get music informations.
      * @private
      */
+    
+    function updateUI() {
+		
+    	switch(current_mood) {
+		case mood.HAPPY:
+			ARTISTNAME = "Happy Artist";
+			SONGTITLE = "Happy Song";
+	    	PLAYLIST = "Happy Playlist"
+
+			break;
+		case mood.SAD:
+			ARTISTNAME = "Sad Artist";
+			SONGTITLE = "Sad Song";
+	    	PLAYLIST = "Sad Playlist"
+			break;
+		case mood.ANGRY:
+			ARTISTNAME = "Angry Artist";
+			SONGTITLE = "Angry Song";
+	    	PLAYLIST = "Angry Playlist"
+			break;
+		default: // default is happy
+			ARTISTNAME = "Happy Artist";
+			SONGTITLE = "Happy Song";
+	    	PLAYLIST = "Happy Playlist"			
+    	}
+		
+	}
+    
     function init() {
         globalPage = "main"; // Current page is "main" page.
         deviceStatus = "Device Gear"; // At first, device status is "gear" status.
