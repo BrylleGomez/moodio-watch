@@ -11,6 +11,13 @@ function init() {	// begin window.onload
 	// Debug
 	console.log("Starting LAUNCHER scripts!");
 	
+	// test
+	
+	var sensors = tizen.sensorservice.getAvailableSensors();
+	console.log('Available sensor: ' + sensors.toString());
+	
+	// test
+	
 	// Attach back key listener
 	window.addEventListener("tizenhwkey", function(ev) {
 		var activePopup = null, page = null, pageId = "";

@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-.git/COMMIT_EDITMSG__DEL__fRYpiq6qGereC1ZG4vF1QKb1mhMYBK0jWB4AYLwc3qc=
-.git/FETCH_HEAD__DEL__47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+.git/COMMIT_EDITMSG__DEL__EvWPwPw3oK1QXm3GOqUvAQf92IHmRtw0pBiHbl7EnGI=
+.git/FETCH_HEAD__DEL__f0BADsgL/CuDMJH9ip+8us4SSLVWsq0oABnXHpqGKPA=
 .git/HEAD__DEL__9vK5RfbEEbAro9qces6I3PcbavZbouDYmqgpAAQrWhA=
-=======
-.git/COMMIT_EDITMSG__DEL__2KlXA4Z5El1IQFVPxDN1aX5mIoMSFWGv3vwsP77K9yk=
-.git/FETCH_HEAD__DEL__DbFJjNlZFi7aOTmMPSeNWEZruxQPVV0FthQ757wA/tQ=
-.git/HEAD__DEL__Y4mtZIvh/OfH4mmkZJgEz34iUEYzGgqZ5cOlzkFz/EM=
->>>>>>> working
-.git/ORIG_HEAD__DEL__kRgbvPy9ombW3mqtKjyqhixP8b+I7QWAd4spo8izCfI=
-=======
-.git/COMMIT_EDITMSG__DEL__TgwaO5D+k3y4wM7zUthkGnQv1SysUcYDp6lgr9AOFGs=
-.git/FETCH_HEAD__DEL__47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
-.git/HEAD__DEL__YnSSmhOz+sHqQ3Kc2xN5yfVqIDrS8gxW/IzGPixe+EQ=
-.git/ORIG_HEAD__DEL__dpnK56+na+fRiKBJzeC2UGVhbkhS3y7aoaw8TWq2v+E=
->>>>>>> working
+.git/ORIG_HEAD__DEL__twPgDTku9ph9kDtWIo0WxKOJ1QH78R2U9/ARwvPv70w=
 .git/config__DEL__ewvhPMki5oD3yL75qeb0DLnOvsHODl75utalIDtGS1U=
 .git/description__DEL__hatsFj1DoX6pz3eIMIvKFGbxsKjRzJLibpv2PaQGKu4=
 .git/hooks/applypatch-msg.sample__DEL__AiNJeguLAzqlijpSG4YphpOGz3qw4vEBlj0yiqYhk/c=
@@ -28,42 +15,25 @@
 .git/hooks/pre-receive.sample__DEL__pMPSuce7P9jRRBwxvU7nGlldZrRPz0ndsxAlIyAWmYk=
 .git/hooks/prepare-commit-msg.sample__DEL__6d3KpBif3dJe2X/Ix4nsp7bKFjkLI5KuMnbwyOGqRhk=
 .git/hooks/update.sample__DEL__dRwDcyACTsLuJ1fz/64LEK0slGNnaE5wWdTcl+rH5DE=
-<<<<<<< HEAD
-<<<<<<< HEAD
-.git/index__DEL__9jGfozRKguFW1jiSjpoq5Bq/7ynTpFKzRZHoC3uiPsQ=
+.git/index__DEL__x13V1sYmoie07zSerPr+4EE8E5YNu6LdABu0T3R9Auk=
 .git/info/exclude__DEL__ZnH+g7egfIky7okWTR8nk7IxgFjri5jcXAbuClo7DsE=
-.git/logs/HEAD__DEL__P9NQ9i+AbXEfuNDaDdMAsZwKb4M88I3oQFjvzGCeCa4=
-.git/logs/refs/heads/master__DEL__OIhPIbdAyhgUJGIHAJFgU2nGn/liuT8x69fmzRa+MQs=
-.git/logs/refs/heads/working__DEL__M2go6j55MxwnEs6YAlA/kWgBtnVIKKV7XB3ryCSltvQ=
-.git/logs/refs/remotes/MoodioWatch/master__DEL__AkEhuGApS3ftHLA9LRWx8sWu2J2hdCsxWSgQolHVR58=
-=======
-.git/index__DEL__CKzQoP/+7Ufm2/zL3xh9SqG8Y4dsg3hVEw5BrCEGk60=
-.git/info/exclude__DEL__ZnH+g7egfIky7okWTR8nk7IxgFjri5jcXAbuClo7DsE=
-.git/logs/HEAD__DEL__ch6NxRHxv4Wf+377Uvs/nXLixHDFx7EUAVPLaj0POU4=
-.git/logs/refs/heads/master__DEL__kxaGV/sK5ku8V8rtRXIXdMF5l2zhWvYXH9jUeon6XVc=
-.git/logs/refs/heads/test__DEL__zW1h2UaOnC3eG26uEPH1G2TxJSJZrXRw8cm02nDpsUQ=
-.git/logs/refs/heads/working__DEL__M2go6j55MxwnEs6YAlA/kWgBtnVIKKV7XB3ryCSltvQ=
-.git/logs/refs/remotes/MoodioWatch/master__DEL__+SWa0WBtCLN6TYF4/YyizQx5LeOKUsKcU1YJilIr+NE=
->>>>>>> working
-.git/logs/refs/remotes/MoodioWatch/working__DEL__Qpx6p039GKu2G6ZN5wxucVCpgtUV77umCmOnb3C7p8g=
-=======
-.git/index__DEL__OZdaXoRlv5EaT6Zvq45VFbFLGbjCr4meILufGHa02RY=
-.git/info/exclude__DEL__ZnH+g7egfIky7okWTR8nk7IxgFjri5jcXAbuClo7DsE=
-.git/logs/HEAD__DEL__VonlQ+V4eqVGKiSZhoK+rv3FE2s1yM6NsVRs7Vq4Yaw=
-.git/logs/refs/heads/master__DEL__3akw8i6wiSo+3apmbJg1u9fas+YiXTW2bM0o3FTjsqk=
-.git/logs/refs/heads/untestedMusic__DEL__BxCagKJ4AiZMdIAJRPQC1KiZ9dxygQ5Uu9Rw5NobyeM=
-.git/logs/refs/heads/working__DEL__1iyGU9zc6AlH5JEpl5uguslXV6A+zXB8ZvJUVE7L0n8=
+.git/logs/HEAD__DEL__xksHPiRKo5VY5aAnSGaD5nPPBMJhN6Q7n+zoKQ2ufJw=
+.git/logs/refs/heads/master__DEL__ICI2aHeAyB8pkvDKXvXbmd0IClBRiy6HxDZFXXe3cZs=
+.git/logs/refs/heads/untestedMusic__DEL__zd8k1Yu88NdmXKjwCCvX8xD3QEyoHD3zkaPDl4uKcgs=
+.git/logs/refs/heads/working__DEL__0CaB6QNrCwYpwLgUhQyMbj0eq7KmKoSSF0JnS6OjVHM=
 .git/logs/refs/remotes/MoodioWatch/Danayal-patch-1__DEL__RlzMu8tyLgPdr2wg6mjfIvEm7lxMec1fAzqVexDNcUc=
-.git/logs/refs/remotes/MoodioWatch/master__DEL__7oSLmJYIN+VnX/w8o07Dv1FWIKJfAF2WTVMcY/d6Y9U=
-.git/logs/refs/remotes/MoodioWatch/working__DEL__izk3QaXeLphg+H/rv1a8sPObLOyzawKwAMvJiU0LqxQ=
->>>>>>> working
+.git/logs/refs/remotes/MoodioWatch/master__DEL__wEIh1LSQgVUzixROqf5sSjstaFyGRyWggw3kz/ZRoM8=
+.git/logs/refs/remotes/MoodioWatch/working__DEL__VcdE+7EZtkFUi86gsVbuMMHZrref8+Nt7tcZxy07nEY=
 .git/objects/00/0ff6d4c48ffc9a667eb7743c76bcda71563358__DEL__+INL1To/TR3BpsJh56ihP7SBJRZCsanagv5sMyA33W0=
+.git/objects/00/16b0c5b91955fc404074606b438f0b56832ede__DEL__fL03sCCH4nG3QdidRCDbeoO2ojeZ5sBGogLM23q5rcU=
+.git/objects/00/5c48da32d241e94eeb1c9658736fb3b1c71a21__DEL__vBcz0n4KO5N02thD7BYCNCA256oSfIdUxTsRDa2rQmw=
 .git/objects/03/4bda99f4855e1d716b3c97053426858e81fdd3__DEL__thGWO8nmYUGGGQDW1kilecXNLunnW/Fc1mopTy2yV5s=
 .git/objects/03/ddd2550f4ad4cf9adf0bd0a43a1d42f76491c6__DEL__J0SulwQbag2cRKzeqMX35Cx3dSzIceF2ovWZ06HG+WI=
 .git/objects/05/bd6a3ac7c582a06224885950d88957414ee870__DEL__XSfMsq5BrPOU4RLK2qS4A73kn5P4qNDpXfOzVqRv2gU=
 .git/objects/05/bd71b6ec2c1982d1e8a5653073281994564ae8__DEL__PXNsl0l7EuMPFASARrf2c4vkfoU8MqkL51Cf4LHE3Ik=
 .git/objects/07/37934f06c4f3c3d4c24e6e931f3c2c0ffa2c4e__DEL__2UZdWPqDIGywVue3puT6U9I45Sb+kl6bvfATqgD+msc=
 .git/objects/07/f1324084ba874a9624d5b0573519c949091bd9__DEL__MvRqVoHfwxm07mIR0IPdkud1DSQrkMH0+9LKWslX5g0=
+.git/objects/08/b0be91744b83a3c395a8a0bd83c8d7fe11b011__DEL__i5h/W8/toRnbzjK0CM7Io2464dQxvMLI6RP0bgiu4zo=
 .git/objects/08/c1b5a86d6b51b58e0ae4ebe248d87cbdc34a3b__DEL__WkRhvTnMLo8hn/ooiiHClvfXLU0SbnN50qtvVE+QC8M=
 .git/objects/09/748d3e1eb7d53f0142d1029d2397f58405b6fb__DEL__woCiyDvLUL1nJkrPs1TZ0suCWI9O9oi6qjE5FTE/8/c=
 .git/objects/0a/4088956946f505276e0a89a122bb7c0852ce9b__DEL__hctbc3HLjVdJBulffdUZBYMDYW+SUHVCAr/rI0VBMEI=
@@ -79,7 +49,9 @@
 .git/objects/10/ccad6a9afd58c4522af267fd0276a6337b2a38__DEL__S1+eGV/xA62qm+jgvZGYb+5pR2/ZpdDPbTNLpUJyLH0=
 .git/objects/10/e8576afbff71f113c2392421e8b8813dba54d8__DEL__hBcXB6ZldlcM+WuAe6yRX3YlKegVA25GEC92hOK8Op0=
 .git/objects/11/015e4110e0dd7f93761ffe34c8161eb84b0902__DEL__5p/m0csL/YPy7rU78V5sgMESt0XmzaEHnfqFfJYlZZA=
+.git/objects/12/354b2a7ad2ca7f74dd53ddb08c91d9e214f070__DEL__DNwXlaGb21X6jbJI9yidUyeRWRV2UJogDcn7JmXqApA=
 .git/objects/12/91b5aeda95f803514aa51b0400bc14b85655c0__DEL__7SX7PAOWPhDtMNqp0IHzv8hV+gwA6cuc1jJPtwuKnUY=
+.git/objects/14/17fc56c448517fb7b1f66e08292583772aa4ab__DEL__+HWL7YypjoeOnpEdSdloE2ig4LSJlUCQTL6yg+WPKRc=
 .git/objects/14/9aca0fbb3f41511771ad83e03cd214b215b7a0__DEL__5J3lOmE4OWdrGqs8ethBkwUFfTF2e4eWgdHRhW4DMpE=
 .git/objects/15/557dc6ce79b4eca2a558cf6aca99af951039f6__DEL__0QHm4Vrb3cBzEXTCGy/8auPNUyK1PkWv2oO2yUCnJLc=
 .git/objects/17/98fcb8a2aa961170273fdf9a1c0afe54e46b59__DEL__y+Ocz3XFGVFJhtO2RWg57d5/EmCnjhsJAHz3n3erg74=
@@ -102,8 +74,10 @@
 .git/objects/21/3a2f79d6a68f8b27241be430055bf7ef80abb5__DEL__JrqMVzP7O1Xs3u+EcImGqfUV1YprCqzvXGzQNziCLMA=
 .git/objects/21/e8796a09d4f26935ffc4879147879a153f0193__DEL__bwNjkbbmpdgvZ7qQstTedJ8nARbd3eTbVxeSZ0MBO0U=
 .git/objects/22/97f12f4d48a457e0ffb32c217c6e95973b97c1__DEL__wzuA+3yPIeO4dxBCrjOUmy4DqaCMcImDaY8ouQPHh1c=
+.git/objects/23/08e1661190fc2e77aba2d3b96a3d130a77ede3__DEL__XmAP/PfC5yLpCRJDtAfil5rzC9R6sOEXyUU3I2/vk5w=
 .git/objects/23/1086249f1065a7ce3d7d930d6338eddc935c64__DEL__d6zJo5+kGhP1m4fWOKd45zcp5G7nnO17mpceyV1Y3mE=
 .git/objects/23/86351522759e2a0b051a0cb0e4b35a56dff088__DEL__9KKkz5G0UwI91vXfoRqDff+Kg+vZkM5aU2GGZ77/nug=
+.git/objects/23/cd7f841a226421d0cedabfa4e7c7f413c60a13__DEL__R4AQbcqOwe5YikidhIO5ssDu0ZbAldBsrngCGmVKLiI=
 .git/objects/24/2343e5f12c0f10c021101502f796f06b619e7e__DEL__Z8J96XA3YEoeFpZaOTQ2qJRDLByMqTt5TjqeyqcebjU=
 .git/objects/24/de3f30b2a6cde6091d928c392776106140a6df__DEL__gJ4xbtbfz0//4Crf4qbD1yyD4Y/poVQKsEBnSE52Y8Q=
 .git/objects/25/8f20da5547de30de949a24a731ef690e03de42__DEL__T5KsxoEKhQGfMe/jNoYt5eAdldfPmcGUdPWGm6jAO5I=
@@ -111,6 +85,7 @@
 .git/objects/27/986629a9c75ae207d90d0289ba413703a95836__DEL__HVWYSpObJ9kQ3gANFKgtfrDX2B36jAFmvxTBu3tdJJ0=
 .git/objects/28/a0f1986f6236ae0d0b241157a7099822ac70b0__DEL__QGP55jv6sPBf9ZXV66eY7PfnLRMvZ/oTl6H26ZueoIo=
 .git/objects/29/831742c70a4ddcf210ed1724910ecbc30857fe__DEL__XSP1rwQnYhk9yEPBy6DuZt1tNvE15EusENJtHvAFsjE=
+.git/objects/29/8df93543a7a1f1762ec45eba6bfc092cf8947e__DEL__8udMhvKpFnPJ+JWlH/rXt5r9Xi/VoXfOZr39lwOuFRs=
 .git/objects/29/b536f644fad3d97afffb0fefc6c7fbcadde5a3__DEL__obNAz1kBDNbOeyYh1p7DcI1gH604ajzmhs5EFJdsLFQ=
 .git/objects/29/df598ee9fd3ec25d8f7946a5a517e6ae28ad4c__DEL__CU/nJcHv6NMFdj4X0bh+55+4zvnp8IJRrJEnbmN/Kos=
 .git/objects/2a/64e378685e8701b65b793a0355873971e51d5f__DEL__W76p8/gCgdGHCMXN642QqgjXNIfSzdOluHIRLQIO+nY=
@@ -138,6 +113,7 @@
 .git/objects/36/cb82b68ac502b9753386c66b712f11441ca83c__DEL__5RvgYKLkJsMYZxaNHvlx159Js4CmyqNTPM97jUaFYDQ=
 .git/objects/37/47885ca10b6d2c92727e0e84a9e567254dee49__DEL__Z6F16PDU1ILq/qeB6nouCVD0td7rHGHZPIq2CfPuKPQ=
 .git/objects/37/aef888bdd8a88afc45e637181f113349fb95d7__DEL__WK1OpYdYKDBr+9wpnwuxPiQGBZQlKmz8O/QvTHeHdLc=
+.git/objects/37/cd58ed171ad0f123a1cd053a290c54eb48aac3__DEL__fANTITlFp3t3OJOW9aA/N7QKn+CoZja37v3jWVUylzs=
 .git/objects/38/2be5b510c9eb31a1677322cb55362cf01824fd__DEL__uJ3+Cls1uom+QiT6pdapxTpapDBV5F3QDDYSlNQroMY=
 .git/objects/39/9a05ecf78630d206cf6ccab172944209ab34fa__DEL__5R9rSjMI3DfWng1NYXwNr/VvI/LPmpZCn/TEZaiboI4=
 .git/objects/3a/94a8347555e2ca916cfa74f0005e5273eb3805__DEL__xik5dFKMyrk5hK0/3KS9N31YHzzJ5p0zIjX1zZXU7Cg=
@@ -164,6 +140,7 @@
 .git/objects/4a/fbfbefeded9653d72affc02c5128dfbdf81423__DEL__an12/4u3iRXfSChS1ZPYW6yChUwXPH86wGMss0uFwds=
 .git/objects/4b/33e50043f6ef1f0c57d8025a2df81f1f67a317__DEL__Gs5XUUFc1h6Abc+Ti5o55Io8KKHkvz1uc1HxpD8kFJM=
 .git/objects/4d/e566c24dde751f8742ff815d2cefc4a2703319__DEL__kElaIADKUcA2YLlI6Mv7ZlbDKEqJn4QaQtkoqTpbdwU=
+.git/objects/4f/dda0a327cd7959088c32055018afa9678f678b__DEL__WWUcm4mNU71dIqO66vdsNbR5OckkCu8Zd4X82k6uHyc=
 .git/objects/52/6b93a71870e84851d6992fdf69e068d0c2bcd5__DEL__RuEeh6rUgzE+3LibjUPTMZTsil7iEnykdnRpPBhzBTk=
 .git/objects/53/d4b4184271e2c1a3716699e5e7d24c2e422fd0__DEL__HzeIzNnsdDoyW5JZAzl9pEYYqDEFXbq9slQhyZTXRKM=
 .git/objects/54/003197b587334c103ee3c1db7ff73bcda2dd76__DEL__jx5L/qA06yMeKmPCPlnRRubWxdMACfyw2mhLygAbF7o=
@@ -179,6 +156,7 @@
 .git/objects/57/dcc5e3540072807b9a749771f7f76562fe51e5__DEL__JF20rnHxG+4c4KlZPPhV0AhgWzSym140ROEaei/SzHw=
 .git/objects/58/c63c4545a940a0fe4db5038d5cd2ff62a48505__DEL__Iibggz28mSFNtUVr1YZrAXlQJfI/LhAajTrHhqkCIlE=
 .git/objects/59/a5aa4cce9b7b8981b873a9bc9e960064194550__DEL__odwUYzr0G5ccXFGoTpiD9VCI30ygeSCYFXpxMI3PSi4=
+.git/objects/5a/b1d9e9ca2838ce7ca18df12f8dc3abcccf6504__DEL__8GbbsYgofhFHikAmhobGmM5Wzp31edxCNqUg+vqpTOw=
 .git/objects/5b/150b0697d1c193b275364cfd5622b70f080500__DEL__KRveUzMKtfUWKRaIUPYoX6oRDdZ9+CNorLKQDsPGChA=
 .git/objects/5b/9f7e44474bd0213f3f346ddde3f0e9c4247460__DEL__EDf+cKXAivsHK0UDmW0QDaI+7hdOezIwdwAqcRWap6Y=
 .git/objects/5d/5fa593acf70e2a5de85d4bb279d732f0b72f8a__DEL__OzIyhgn+Wttwq0ersG0mYW+TjvVdtgV0Jxy5pavzJH0=
@@ -202,6 +180,7 @@
 .git/objects/6d/67eafaedbc44c064ac50790cca51a6b55b219e__DEL__pLxu3ydZljkUeJrJAjytyxVlYOjycrJZKxTkeAuhT/g=
 .git/objects/6e/5955f6520e0f51de42859aa4590596ad7d38a1__DEL__r9U2gunjoqdX/e5Gqup70BqGe4pUz/3CGDQnHpWsExQ=
 .git/objects/6e/8272433c9db49f6dc16975da05d70df214c3e9__DEL__J9hU4cxhd/Xd8Fc611wxfCVfhRAHONpHtxjkWusjL4Q=
+.git/objects/6e/8dfc1299e8880fdfc84498a5d19c8f0c5839a2__DEL__thFxN/UopREk9uEcwFzkj9Z5umwEyQu1l0Xplup6C38=
 .git/objects/6f/59ccf3ca321d645b47d7086b108c8d448c5d07__DEL__vyHzSGMugQvLwwR5cth62YiAEUR54MPT/ktisfvMuAE=
 .git/objects/70/3cb0ce8017d7b1c6d1b4733106c03d5c6b1e45__DEL__oajYqy9uZJ4TM+uWNtiCdIjfpn9NVJ7m8xat6cRbXAU=
 .git/objects/71/e56fb0c32b8e533680df76473e9a706aa7f022__DEL__tjyCfEzT3P1AJtTJXHDVSjPr97D90RjxjYYQjGzMo4E=
@@ -233,6 +212,7 @@
 .git/objects/84/de3865537d0401c7ab3cde08943a732f9f600e__DEL__KXb4M3lKxRVyVYKqxH/90gJP7UwqWZYodA0JKXd7tb4=
 .git/objects/85/87bbf460d9ef5d7321e0ce3afe77009056bdfe__DEL__LB5n8wHobuQ4E3o8IkJW/YHxOqCzQE8oWfJYc/0qG48=
 .git/objects/85/885cc585daccf0b5ec39a9924aea77fbfd79dd__DEL__unYrvWXnE7zcvt6tSVYdcobOz87BY8AW6NBqP+ZKkQE=
+.git/objects/86/d88bdb83307672e098b0d4fb163496cbd4e5e5__DEL__YKfitH+fQjdGDfV5r97A4+/OnXyv11vMklzDImXwREY=
 .git/objects/89/b74cbcc5c8beca681425cc6dcf0a0d2bd66846__DEL__zufuqmJVhFPTbi749mwSwAoi1uZExGg8VDUXC9yD8LY=
 .git/objects/8a/a80442c0a9576b9d1a4421cb5143b01544d378__DEL__8emmCTa2bVR9m4pQi2HmqryMnty7gF+PM5z5jVaDBJk=
 .git/objects/8c/489c907cb7f46002489b4f9e9d56c44a336323__DEL__FDVnkcBFKD8e5LBIc9ttR5sOvSOoheBXSNJ7AIQ/aDw=
@@ -253,6 +233,7 @@
 .git/objects/96/47fbfafb6cf1be68239666cf75cf02ea466e00__DEL__DvsGsMvysynWk+S003krpBL1B2ODHwglLRhM7kPTRwU=
 .git/objects/97/9f6299e3443bb0eb9cd924c286c1a34c05a6de__DEL__nRVlv0tjh1bXBSpa7aXchiw9qEhLKw8IMdNoTcv93to=
 .git/objects/98/3d398e12cbcbd5593730b709c0cdaf13892ff0__DEL__KBZgz0QXvu7qaOMbFN8zOuC23GDFXdjcY8d7M9JpSHQ=
+.git/objects/98/df4c68e9341d6812827ffc73c8529632ca2877__DEL__pe9hmhiZFOHOGpt0b0NzPMcFOFJJDPDHAQiBDCwT2CE=
 .git/objects/99/4052b583dff21c36d7751395e7b59d69c70714__DEL__X95kFKH8MmuXD0dvHnovMiz0A0ZGKYDR5mRLvohUwIg=
 .git/objects/99/468e260615d2170810a6a4e31adb9bc9dcfe70__DEL__yrarvyiz1RKZb+HlnLsWxH9WTaspZwb13MPAJIW+v60=
 .git/objects/99/bd9bfcd824ae8a5359a70ed1a37e36d59ee164__DEL__2BRRi8E8tuXDqS49JWdqkRok1/6Og+8pTfYyK1155ao=
@@ -310,6 +291,7 @@
 .git/objects/c9/b5da7e807b6f18e76c1ef4c0cd17e8d63d0a9f__DEL__8DWFgHpOWQ+pmO3d7LRMPV3goa/VTToLmJsNIOzLuQ0=
 .git/objects/ca/44ea8ee084ef4216a5749aaa6128b2750f8dea__DEL__KgUWVOk6wM8yCi8WzpBRwDaDHJoTiZCunoACgu+B1MA=
 .git/objects/ca/7979c2ead330a1d43f227620c96c9c34e310eb__DEL__dzPUuJnfnrJJXp9LMzBgs4R7Fvs+Sh1ZjGz9YFy0d9g=
+.git/objects/ca/ac3cc7fc789c739f3247aede32d9a1e466bb1c__DEL__i63v4U+tKKhENv/yLTNWbwf5PvHVAwRGGVQpT2KT+O0=
 .git/objects/cc/963929bbc77c727fa43ef8486bf15b5bdfaf2e__DEL__7T9RKxrxcMS0UGtNZOcPu0hsgW1C5lOrb4iaEqzfams=
 .git/objects/ce/c5fe291445f0d312b219f61aeb1b3ca6524a84__DEL__ZP0n/j0y3VN37Q7REeEAih8RWuF6BdHBR8618bpgw6o=
 .git/objects/ce/d29247d01aa75af728746580fe1203c1383a06__DEL__7zg9HHiWclhyR/acY/iuxMlesS49wNF1gacMq9fJkHc=
@@ -320,10 +302,7 @@
 .git/objects/d0/f08a3d416b148291d4955bf02a0e81f1face50__DEL__Wb64jQbspEQ0T1utaN9Z0OgnelMy0duzCJnLjKkETJ8=
 .git/objects/d4/024df94949d59ffa536adae4468c438b1873c8__DEL__nOf31+etvb4RqhEcJ2ZlQOKgXbIul3LwpvKVvVLesNQ=
 .git/objects/d4/bcc985210cd788537588b705d456ee7fbf79cc__DEL__PLWjarJPN6tUGYKMwoLa1uDAylOmWKm+I9ZdbU5bfoQ=
-<<<<<<< HEAD
-=======
 .git/objects/d7/b9ca2df8040a68ad86ae23235155524e7fbcc1__DEL__jwQtmF9ZsmM73nkIboihrlQsf8eWV1nsiIIcsNfsdNw=
->>>>>>> working
 .git/objects/d9/24082db332b4cb7c06492e14f8d36a58070c6a__DEL__6IVIYJKjeU7lzn5jgJPA68Fzri5ew8sD3WoTGRfvaBs=
 .git/objects/d9/dad2cba1295fab8e0c9a49af03675084c8908f__DEL__NKJ4lwX9b6AKT8f6fnaGQJw3tl5sT5T0gpR9Z/QhdRg=
 .git/objects/db/fb43bc1e493ae6f9849781f9ba626f61c888d5__DEL__hCWeaHeYkc40AaPmI1q+eqIx1k1j3yhSU9WLcx71+lA=
@@ -335,7 +314,10 @@
 .git/objects/e1/4f69bb13c4cf7cf85641d5822b74eb1e377c70__DEL__66y8oKkbGIYrnKwlGVzlmNn8hvQfvaKCVvfnZ+/jMWg=
 .git/objects/e1/89817e6653fd936d4c5bb33e324f19de88ff03__DEL__RmHWeOrFcmaEf6UvXnVyu9wQSE8RNTgHtHZRpBI/u7w=
 .git/objects/e2/0b2bc97bdaaadc5338985fb804111cfe0e2176__DEL__5w61+aE/0X4Y+qWoMUeZUAkv+5BLTERtChA9KpDwsHc=
+.git/objects/e2/8be192db2478a6eacedfd688e53968b25d30f1__DEL__3BEgLtkXfgG2cjN8SXmqGNSM21npDXHL1HHBvIm1fu0=
 .git/objects/e3/049515d3420939407a48b5ed4e766e4a6bf685__DEL__WFzQeteRpih0IJe1G35W+EhkrL9QBKQXqsssuQA2nuY=
+.git/objects/e4/4444d45d6dcf76ccad20ab682d49a70ba0257e__DEL__qxah8xvnUBQkzchs4H9bdYKlVIsEbcZAvo2l2iup+sY=
+.git/objects/e5/21dc6cdbbd330844e80cb4d4c9abac2de30753__DEL__vdVSh0x59FHmuSC+H/BcAmSqD296rqJAY4tBjtGzHLo=
 .git/objects/e6/3e5f810ff0d27f24bf0a7e4bee623641b39e98__DEL__2jEx86F64Bf9G41Md59NKfC5qrSXKeBsQp50eBq6kWE=
 .git/objects/e6/5a5201179206a3c7db5a29b346e157cace7b20__DEL__8XKhxca8Q2LLTIpjbPZWu7GhmmWzEwEnW+k4dtMPnDw=
 .git/objects/e6/853b710131d74da23d37524ccb29beae070b8b__DEL__Nfxk0jTHcek56VXHE6OTqJy2fz2rEEhdAKYX+imin4U=
@@ -362,30 +344,13 @@
 .git/objects/fd/501442dc9a4b4f33fe0f874d2b8994e23d4e72__DEL__hIESycvze2xUKmSVIQN92TpDHDo3Zw4KFGy0XxOIP+I=
 .git/objects/pack/pack-2c4069dbc927009a5e5a1587e2c2aaaefb8055f2.idx__DEL__693zhNbOwRygxIiUSuQ/ymWnEf45HL43q2jo9tOiv9I=
 .git/objects/pack/pack-2c4069dbc927009a5e5a1587e2c2aaaefb8055f2.pack__DEL__28TOYKikVpmFLAUGSJY6XdA+xHTYl3e3ob2wuOMieYA=
-<<<<<<< HEAD
-<<<<<<< HEAD
-.git/refs/heads/master__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/refs/heads/working__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/refs/remotes/MoodioWatch/master__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/refs/remotes/MoodioWatch/working__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/sourcetreeconfig.json__DEL__PAMB/u5LI9p8+Wg36LDhrHOb4YAdRdjEAxAs5Z4BxdI=
-=======
-.git/refs/heads/master__DEL__XUMlI+XZpLiHjl4KjEWGO+eYXsZ03IE3RRRo7n/iqUg=
-.git/refs/heads/test__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/refs/heads/working__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/refs/remotes/MoodioWatch/master__DEL__XUMlI+XZpLiHjl4KjEWGO+eYXsZ03IE3RRRo7n/iqUg=
-.git/refs/remotes/MoodioWatch/working__DEL__97zVFahvDFkdoOavGGSKWIjwhYvU8S3dRV/5qj8h3+c=
-.git/sourcetreeconfig.json__DEL__6dXeF3/rkuxZgrRKMGJMckS79fR3uLyZuWXoTbc/XOU=
->>>>>>> working
-=======
-.git/refs/heads/master__DEL__twPgDTku9ph9kDtWIo0WxKOJ1QH78R2U9/ARwvPv70w=
-.git/refs/heads/untestedMusic__DEL__RSp4rAf8Mr0CZyL2Bw49kKAz9Nz3t7aj7EJM2YcUwFA=
-.git/refs/heads/working__DEL__dpnK56+na+fRiKBJzeC2UGVhbkhS3y7aoaw8TWq2v+E=
+.git/refs/heads/master__DEL__O2+RFrHNBBtuq9vudlR9th0wbDjz8qcIH82EEz+G4AQ=
+.git/refs/heads/untestedMusic__DEL__soJJB0Pmqd1wXI6t91ZkG+Eyda9m9CUnCxuWX/AfO3M=
+.git/refs/heads/working__DEL__soJJB0Pmqd1wXI6t91ZkG+Eyda9m9CUnCxuWX/AfO3M=
 .git/refs/remotes/MoodioWatch/Danayal-patch-1__DEL__xyt1B159PYPdkjUTO3Yyy/KFuzdu3oD3rUXL9j0FkTg=
-.git/refs/remotes/MoodioWatch/master__DEL__twPgDTku9ph9kDtWIo0WxKOJ1QH78R2U9/ARwvPv70w=
-.git/refs/remotes/MoodioWatch/working__DEL__dpnK56+na+fRiKBJzeC2UGVhbkhS3y7aoaw8TWq2v+E=
-.git/sourcetreeconfig.json__DEL__21P+bz6boogl8Z8CNpupwQKJoQPrDZoQUmMAcUwNGf8=
->>>>>>> working
+.git/refs/remotes/MoodioWatch/master__DEL__O2+RFrHNBBtuq9vudlR9th0wbDjz8qcIH82EEz+G4AQ=
+.git/refs/remotes/MoodioWatch/working__DEL__soJJB0Pmqd1wXI6t91ZkG+Eyda9m9CUnCxuWX/AfO3M=
+.git/sourcetreeconfig.json__DEL__DRq6V9ftjO0EY0h5LTUUkdqKl1NCttDzK38mUN3WcOs=
 .gitignore__DEL__+PHsds4icLMRMH9pqI8+umYmyzZtXqhesP++7wnRjvY=
 config.xml__DEL__8Jw5XsDTpdR7TpVTbj7dvEVFf8CLY1z+w/gomPIdPZs=
 css/images/License.txt__DEL__+jo86dGQu1oS4fLCEMvSSZCdj0swdumPGIkrkbXiWjw=
@@ -440,19 +405,11 @@ css/images/settings_blue.png__DEL__u92u9nb50JoKvk0jMD3HJzBNrrPYD4GDN74xkpB2q6I=
 css/images/settings_light.png__DEL__ulrAbI8HXqE/pljUy323YFeCwwv0B7D/TmVG/yQ0ymo=
 css/styles.css__DEL__p/n3OLGWaCq9hp9KYgr80rdpNTeoOgvSE+eSoSeYS6k=
 dashboard.html__DEL__wmvLEgfLa9bE0DLEifASZw9Mr1nBtRS3MAPCBDWUt+g=
-<<<<<<< HEAD
-js/dashboard_scripts.js__DEL__uSsGl85wXfFx19OcPJ7vnk0INvbC2pi6wDO4Ew535sQ=
-js/global_scripts.js__DEL__kOapquQB1OCfbBIBvZ2U02nJjMnGi8buhJ8/rdiJXOE=
-js/launcher_scripts.js__DEL__K6YYxEnac/ou/s/PKEToh5RCubvnEXzVbKlglQamvHY=
-js/login_scripts.js__DEL__LaJp4z8litm//Rb/rzQeb79jOhuiF+lAgNcf3iEzTjQ=
-js/measure_scripts.js__DEL__4mWNhQ2lsS7QUoy/o6fPQQ/6MqqETg+RYbFC45rIRUg=
-=======
 js/dashboard_scripts.js__DEL__csT/ZnrtdKCL4YAMK4tUX0dwaAahbN1BtNEkBOipgYQ=
 js/global_scripts.js__DEL__HZuy8IBjeeB62x9NNAyr/uNlkPzVI6Fn5PHEr1KJRsI=
-js/launcher_scripts.js__DEL__m+sHAKEQSr059YF55cXk9uof+V+NQqQmpN3BEYYCjms=
+js/launcher_scripts.js__DEL__CoKFy8AwHTyvki9zAalTrdJ2Dnl2OSnMckY2zOlJbB0=
 js/login_scripts.js__DEL__H3DbSky6kQbvcJS2IKuDIH3BZgrhHGFtgcEdD3L8sNY=
-js/measure_scripts.js__DEL__4uGOjHd/NyasRo+ig+RtybmwkIG2RLwwiyfVZDdSaqM=
->>>>>>> working
+js/measure_scripts.js__DEL__xXemrHjo191wwGd8HUfgHvd92pd0edBSCzcHnkAPFYM=
 js/playlist_scripts.js__DEL__Bifs12owbWlsBlNqShkd6bAVrv8RtDcVWsra7Rr/TGE=
 js/playmusic/getcontent.js__DEL__gzNcgIrokbQ9jmJd57mJx4QRozF75GehbhpALz2zw7c=
 js/playmusic/moreoptions.js__DEL__o6Xa12SshlbNOT1wCP+mBAe4PQ5D7Nuw7V9PmWra7hM=
@@ -799,12 +756,4 @@ login.html__DEL__Fm1DKRqnEIVyngQ0P7PHfTUQMWlCfQwnH2lS/qjUDqU=
 measure.html__DEL__mfGLDEuL9FQ3lM1qPagzvwKwTLdhtlfPMDQOwRIUKIw=
 playlists.html__DEL__xtGW8wHt+m2PvuPlXYm8zLl1Oo0vxh5MoRrzE/pJPQA=
 yay.png__DEL__QJlVejY79XUDl875YknNCiG+qQU796EEe4s5Lm2VE9I=
-<<<<<<< HEAD
-<<<<<<< HEAD
-author-signature.xml__DEL__KPN0Y6KoqP44q9RqkZcdDH2CcnAC4+oBU2WM9ImUtwk=
-=======
-author-signature.xml__DEL__KzDTvA7XxG8TwCI9H889Id/Xv9T5tyDq1/YZeDGMjVY=
->>>>>>> working
-=======
-author-signature.xml__DEL__Ml6PgJfVpv1jYXbDwTYzgO9i3pBr2RnXi2RouRPWeyc=
->>>>>>> working
+author-signature.xml__DEL__WKj2108fsUmp1qkUBb7OQKm7Njta5JC0soc9YQvFYE4=

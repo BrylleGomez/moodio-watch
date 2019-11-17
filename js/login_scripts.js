@@ -48,13 +48,14 @@ $("#login_button").click(function(){
 //	var creds = {
 //		username: user,
 //		password: pass
-//	}
+//	}	// create JSON object to store credentials
 //	$.post(server_ip + ":" + server_port + route_sendcreds, creds, function(data, status) {
+//		// send credentials to server
 //		console.log("Login Status: " + data);
-//		if(data) {
+//		if(data) {	// if login success, will receive true from server
 //			window.location.pathname = '/launcher.html';
 //			alert("Login success!");
-//		} else {
+//		} else {	// if login fail, will receive false from server
 //			window.location.pathname = '/login.html';
 //			alert("Login failed!");
 //		}

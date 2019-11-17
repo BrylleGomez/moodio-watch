@@ -37,35 +37,40 @@ function init() {	// begin window.onload
 		
 	/* ----------------------- Heart Rate Monitor, Light, and Temperature Code ----------------------- */
 	
-	var counter = 0;
+	var counter = 0;		// counter to store how many watch sensor readings have been taken
 	var hrReadings = [];	// array to contain 20 heart rate readings
 	var luxReadings = [];	// array to contain 20 heart rate readings
 	tizen.ppm.requestPermission("http://tizen.org/privilege/healthinfo",
-			onSuccessPermission, onErrorPermission);
-	var lightSensor = tizen.sensorservice.getDefaultSensor('LIGHT');
+			onSuccessPermission, onErrorPermission);					// request to use watch sensors
+	var lightSensor = tizen.sensorservice.getDefaultSensor('LIGHT');	// get light sensor
 	var luxReading = 0;		// variable to store light level reading
 
 	function onSuccessLight() {
+		// called when light sensor successfully started
 	    console.log('light sensor started');	// debug
 	    lightSensor.getLightSensorData(onGetLightSuccess);
 	    // lightSensor.stop();
 	}
 	
 	function onGetLightSuccess(sensorData) {
+		// called when successfully retrieved light level from light sensor
 	    console.log('light level: ' + sensorData.lightLevel); 	// debug
 	    luxReading = sensorData.lightLevel;
 	}
 	
 	function onSuccessPermission() {
-		tizen.humanactivitymonitor.start('HRM', onChangedHRM);
-		lightSensor.start(onSuccessLight);
+		// called when successfully retrieved permission to read from servers 
+		tizen.humanactivitymonitor.start('HRM', onChangedHRM);		// start reading HRM
+		lightSensor.start(onSuccessLight);							// start reading light sensor
 	}
 
 	function onErrorPermission() {
+		// called when unsuccessful in retrieving permission to read from servers 
 		console.log("Error getting HealthInfo permission from device!");
 	}
 
 	function onChangedHRM(hrmInfo) {
+		// called for each successive heart rate sensor reading
 		var heartRate = hrmInfo.heartRate;		// retrieve heart rate from HRM
 		var rrInterval = hrmInfo.rRInterval;	// retrieve heart rate variability from HRM
 		console.log('Heart Rate: ' + heartRate);	// debug
@@ -76,29 +81,12 @@ function init() {	// begin window.onload
 		}
 	    if (counter > 20) {		// after 20 valid readings, stop reading and send heart rate to server
 	    	tizen.humanactivitymonitor.stop('HRM');		// stop HRM
-	    	
 	    	sendSensorVals();							// send to server
 	    }
 	}
-
-//	function sendSensorVals() {
-//		function getSum(total, num) { return total + num;} 			// sum all heartrate readings
-//		var avg = hrReadings.reduce(getSum) / hrReadings.length;	// get avg of heartrate readings
-//        console.log('Sending heartrate: ' + avg);					// debug
-//        $.post(server_ip + ":" + server_port + route_sendval, {		// post sensor values to server via jQuery post
-//        	heartrate: avg.toString(),								// HR value
-//        	lightlevel: luxReading.toString()						// lux value
-//		}, function(data, status) {
-//			console.log("Response from server: " + data);			// test
-//			updateMood(data)										// update global variable with mood retrieved from server
-//			updateUI();												// update UI due to mood change
-//			// show detected mood and hide "measuring"
-//			$("#measuring_wrapper").hide();
-//			$("#measure_wrapper").show();
-//		});
-//	}
 	
 	function sendSensorVals() {
+		// send sensor values to server
 		function getSum(total, num) { return total + num;} 			// sum all heartrate readings
 		var avg = hrReadings.reduce(getSum) / hrReadings.length;	// get avg of heartrate readings
         console.log('Sending heartrate: ' + avg);					// debug
