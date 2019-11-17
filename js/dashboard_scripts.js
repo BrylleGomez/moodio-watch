@@ -38,7 +38,7 @@ function init() {	// begin window.onload
     	"message": "moodreq"
 	}, function(data, status) {
 		console.log("Response from server: " + data);			// test
-		updateMood(data)										// update global variable with mood retrieved from server
+		updateMood(data);										// update global variable with mood retrieved from server
 		updateUI();												// update UI due to mood change
 	});
 
@@ -64,27 +64,31 @@ function updateUI() {
 	var dashboard_message = "";
 	var smiley_src = "";
 	var mood_text = "";
-	console.log(current_mood);
+	console.log("Updating UI with: " + current_mood);
 	switch(current_mood) {
 		case mood.HAPPY:
 			dashboard_message = "Keep the vibe going!";
 			smiley_src = "css/images/happy_smiley.png";
 			mood_text = "Happy";
+			console.log("UI set to HAPPY");
 			break;
 		case mood.SAD:
 			dashboard_message = "Cheer up buddy!!";
 			smiley_src = "css/images/sad_smiley.png";
 			mood_text = "Sad";
+			console.log("UI set to SAD");
 			break;
 		case mood.ANGRY:
 			dashboard_message = "Relax...Take deep breaths...";
 			smiley_src = "css/images/angry_smiley.png";
 			mood_text = "Angry";
+			console.log("UI set to ANGRY");
 			break;
 		default: // default is happy
 			dashboard_message = "ERROR!";
 			smiley_src = "";
 			mood_text = "ERROR!";
+			console.log("UI set to ERROR");
 	}
 	$("#dashboard-header-message").text(dashboard_message);
 	$("#dashboard_smiley").attr("src", smiley_src);
