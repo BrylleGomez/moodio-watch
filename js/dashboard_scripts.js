@@ -2,6 +2,9 @@
 /////* ~~~~~~~~~~~~~~~~~ Scripts for dashboard.html ~~~~~~~~~~~~~~~~~~ */////
 /////////////////////////////////////////////////////////////////////////////
 
+var server_ip = "http://192.168.43.151";
+var server_port = "3004";
+var route_reqmood = "/mood";
 
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
@@ -34,6 +37,33 @@ function init() {	// begin window.onload
 	
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~ Update UI with Mood ~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
+	// Fetch mood
+	$.post(server_ip + ":" + server_port + route_reqmood, {		// post sensor values to server via jQuery post
+    	"message": "moodreq"
+	}, function(data, status) {
+		console.log("Response from server: " + data);			// test
+		updateMood(data)										// update global variable with mood retrieved from server
+		updateUI();												// update UI due to mood change
+	});
+
+}	// end window.onload 
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////// EVENT LISTENERS //////////////////////////////
+
+$("#dashboard_measure").click(function(){
+	window.location.pathname = '/measure.html';
+});
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////// HELPER/CALLBACK FUNCTIONS /////////////////////////
+
+function updateUI() {
+	
 	// Dashboard message, moodtext and smiley
 	var dashboard_message = "";
 	var smiley_src = "";
@@ -63,23 +93,7 @@ function init() {	// begin window.onload
 	$("#dashboard-header-message").text(dashboard_message);
 	$("#dashboard_smiley").attr("src", smiley_src);
 	$("#td-left-2").text(mood_text);
-
-}	// end window.onload 
-
-/////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////// EVENT LISTENERS //////////////////////////////
-
-$("#dashboard_measure").click(function(){
-	window.location.pathname = '/measure.html';
-});
-
-/////////////////////////////////////////////////////////////////////////////
-
-
-///////////////////////// HELPER/CALLBACK FUNCTIONS /////////////////////////
-
-;
+	
+}
 
 /////////////////////////////////////////////////////////////////////////////
