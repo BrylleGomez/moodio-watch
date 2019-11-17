@@ -4,6 +4,10 @@
 
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
+var server_ip = "http://192.168.43.151";
+var server_port = "3004";
+var route_reqmood = "/mood";
+
 window.onload = init();
 	
 function init() {	// begin window.onload 
@@ -67,28 +71,14 @@ function init() {	// begin window.onload
 	
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~ Update UI with Mood ~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
-	// Launcher Smiley & Message
-	var smiley_src = "";
-	var launcher_message = "";
-	switch(current_mood) {
-		case mood.HAPPY:
-			smiley_src = "css/images/happy_smiley.png";
-			launcher_message = "Someone's in a cheerful mood!";
-			break;
-		case mood.SAD:
-			smiley_src = "css/images/sad_smiley.png";
-			launcher_message = "Why the sad face?";
-			break;
-		case mood.ANGRY:
-			smiley_src = "css/images/angry_smiley.png";
-			launcher_message = "Someone's all worked up...";
-			break;
-		default: // default is happy
-			smiley_src = "";
-			launcher_message = "ERROR!";
-	}
-	$("#launcher_smiley").attr("src", smiley_src);
-	$("#laucher_message").text(launcher_message);
+	// Fetch mood
+	$.post(server_ip + ":" + server_port + route_reqmood, {		// post sensor values to server via jQuery post
+    	"message": "moodreq"
+	}, function(data, status) {
+		console.log("Response from server: " + data);			// test
+		updateMood(data)										// update global variable with mood retrieved from server
+		updateUI();												// update UI due to mood change
+	});
 	
 }	// end window.onload 
 
@@ -114,5 +104,32 @@ $("#div_playlist").click(function(){
 $(".dismissFeedback").click(function(){
 	  $("#div_feedback").hide();
 });
+
+function updateUI() {
+	
+	// Launcher Smiley & Message
+	var smiley_src = "";
+	var launcher_message = "";
+	switch(current_mood) {
+		case mood.HAPPY:
+			smiley_src = "css/images/happy_smiley.png";
+			launcher_message = "Someone's in a cheerful mood!";
+			break;
+		case mood.SAD:
+			smiley_src = "css/images/sad_smiley.png";
+			launcher_message = "Why the sad face?";
+			break;
+		case mood.ANGRY:
+			smiley_src = "css/images/angry_smiley.png";
+			launcher_message = "Someone's all worked up...";
+			break;
+		default: // default is happy
+			smiley_src = "";
+			launcher_message = "ERROR!";
+	}
+	$("#launcher_smiley").attr("src", smiley_src);
+	$("#laucher_message").text(launcher_message);
+	
+}
 
 /////////////////////////////////////////////////////////////////////////////
