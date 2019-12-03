@@ -43,12 +43,16 @@ $("#login_button").click(function(){
 //	// login
 //	var user = $("#login_username").val().toString();
 //	var pass = $("#login_password").val().toString();
+//	var cap = tizen.systeminfo.getCapabilities();	// retrieving watch device ID
+//	var devID = cap.duid;							// retrieving watch device ID
 //	console.log("Username: " + user);
 //	console.log("Password: " + pass);
+//	console.log("Device ID: " + devID);
 //	var creds = {
 //		username: user,
-//		password: pass
-//	}	// create JSON object to store credentials
+//		password: pass,
+//		duid: devID
+//	}	// create JSON object to store credentials and device ID
 //	$.post(server_ip + ":" + server_port + route_sendcreds, creds, function(data, status) {
 //		// send credentials to server
 //		console.log("Login Status: " + data);
@@ -62,13 +66,17 @@ $("#login_button").click(function(){
 //	});
 	
 	// test login
-	var user = "Mansour";
-	var pass = "12345678"
+	var user = "mansour";
+	var pass = "12345678";
+	var cap = tizen.systeminfo.getCapabilities();
+	var devID = cap.duid;
 	console.log("Username: " + user);
 	console.log("Password: " + pass);
+	console.log("Device ID: " + devID);
 	var creds = {
 		username: user,
-		password: pass
+		password: pass,
+		devid: devID
 	}
 	$.post(server_ip + ":" + server_port + route_sendcreds, creds, function(data, status) {
 		console.log("Login Status: " + data);

@@ -6,7 +6,7 @@
 ///////////////////////////// GLOBAL VARIABLES //////////////////////////////
 
 // Server IP, port, and routes
-server_ip = "http://172.20.10.2";
+server_ip = "http://192.168.1.104";
 server_port = "3004";
 route_sendcreds = "/loginwatch";
 route_reqmood = "/mood";
