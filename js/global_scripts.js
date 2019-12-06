@@ -5,12 +5,21 @@
 
 ///////////////////////////// GLOBAL VARIABLES //////////////////////////////
 
-// Server IP, port, and routes
-server_ip = "http://192.168.1.104";
-server_port = "3004";
-route_sendcreds = "/loginwatch";
-route_reqmood = "/mood";
-route_sendval = "/addsensors";
+//// Server IP, port, and routes
+//server_ip = "http://localhost";
+//server_port = "3004";
+//route_sendcreds = "/loginwatch";
+//route_reqmood = "/mood";
+//route_sendval = "/addsensors";
+
+// MQTT Parameters
+mqtt_broker = 'broker.hivemq.com';
+mqtt_client_id = 'moodioWatch';
+mqtt_watch_login = 'moodio/login';
+mqtt_sensors_hrm = 'moodio/sensors/hrm';
+mqtt_sensors_light = 'moodio/sensors/light';
+mqtt_mood = 'moodio/mood';
+mqttClient = new Paho.MQTT.Client(mqtt_broker, 8000, mqtt_client_id);
 
 // Global user variable
 var uid = null;

@@ -5,7 +5,7 @@
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
 window.onload = init();
-	
+
 function init() {	// begin window.onload 
 	
 	// Debug
@@ -31,6 +31,11 @@ function init() {	// begin window.onload
 		}
 	});
 	
+	// Connect to MQTT
+	console.log("Attempting to Connect...");		
+    mqttClient.connect({onSuccess:onConnect});			// connect to MQTT broker
+    mqttClient.onMessageArrived = onMessageArrived;		// set message arrival callback
+	
 }	// end window.onload 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -40,34 +45,11 @@ function init() {	// begin window.onload
 
 $("#login_button").click(function(){
 	
-//	// login
+	// MQTT login
+	var user = "mansour";	// test
+	var pass = "12345678";	// test
 //	var user = $("#login_username").val().toString();
 //	var pass = $("#login_password").val().toString();
-//	var cap = tizen.systeminfo.getCapabilities();	// retrieving watch device ID
-//	var devID = cap.duid;							// retrieving watch device ID
-//	console.log("Username: " + user);
-//	console.log("Password: " + pass);
-//	console.log("Device ID: " + devID);
-//	var creds = {
-//		username: user,
-//		password: pass,
-//		duid: devID
-//	}	// create JSON object to store credentials and device ID
-//	$.post(server_ip + ":" + server_port + route_sendcreds, creds, function(data, status) {
-//		// send credentials to server
-//		console.log("Login Status: " + data);
-//		if(data) {	// if login success, will receive true from server
-//			window.location.pathname = '/launcher.html';
-//			alert("Login success!");
-//		} else {	// if login fail, will receive false from server
-//			window.location.pathname = '/login.html';
-//			alert("Login failed!");
-//		}
-//	});
-	
-	// test login
-	var user = "mansour";
-	var pass = "12345678";
 	var cap = tizen.systeminfo.getCapabilities();
 	var devID = cap.duid;
 	console.log("Username: " + user);
@@ -78,16 +60,9 @@ $("#login_button").click(function(){
 		password: pass,
 		devid: devID
 	}
-	$.post(server_ip + ":" + server_port + route_sendcreds, creds, function(data, status) {
-		console.log("Login Status: " + data);
-		if(data) {
-			window.location.pathname = '/launcher.html';
-			alert("Login success!");
-		} else {
-			window.location.pathname = '/login.html';
-			alert("Login failed!");
-		}
-	});	
+	var message = new Paho.MQTT.Message(JSON.stringify(creds));
+    message.destinationName = mqtt_watch_login;
+    mqttClient.send(message); // publish message
 	
 });
 
@@ -96,6 +71,31 @@ $("#login_button").click(function(){
 
 ///////////////////////// HELPER/CALLBACK FUNCTIONS /////////////////////////
 
-;
+// MQTT onConnect
+function onConnect() {
+    // Once a connection has been made, make a subscription and send a message.
+    console.log("Connected to MQTT broker!");
+    mqttClient.subscribe(mqtt_watch_login);
+    console.log("Subscribed to all topics!");
+    
+}
+
+// MQTT onMessageArrived
+function onMessageArrived(message){
+	
+	if(message.destinationName == mqtt_watch_login){
+
+		console.log("Login Status: " + message.payloadString);
+		if (message.payloadString == "true") {	// if login success, will receive true from server
+			window.location.pathname = '/launcher.html';
+			alert("Login success!");
+		} else if (message.payloadString == "false") {	// if login fail, will receive false from server
+			window.location.pathname = '/login.html';
+			alert("Login failed!");
+		}
+		
+    }
+	
+}
 
 /////////////////////////////////////////////////////////////////////////////

@@ -5,18 +5,15 @@
 ////////////////////////////////// ON LOAD //////////////////////////////////
 
 window.onload = init();
+
 	
 function init() {	// begin window.onload 
 	
 	// Debug
 	console.log("Starting LAUNCHER scripts!");
 	
-	// test
-	
 	var sensors = tizen.sensorservice.getAvailableSensors();
 	console.log('Available sensor: ' + sensors.toString());
-	
-	// test
 	
 	// Attach back key listener
 	window.addEventListener("tizenhwkey", function(ev) {
@@ -37,6 +34,11 @@ function init() {	// begin window.onload
 			}
 		}
 	});
+	
+	// Connect to MQTT
+	console.log("Attempting to Connect...");		
+    mqttClient.connect({onSuccess:onConnect});			// connect to MQTT broker
+    mqttClient.onMessageArrived = onMessageArrived;		// set message arrival callback
 	
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~ Section Changer ~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
@@ -72,17 +74,6 @@ function init() {	// begin window.onload
 	// Bind the callback 
 	changer.addEventListener("sectionchange", pageIndicatorHandler, false);
 	
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~ Update UI with Mood ~~~~~~~~~~~~~~~~~~~~~~~~ */
-	
-	// Fetch mood
-	$.post(server_ip + ":" + server_port + route_reqmood, {		// post sensor values to server via jQuery post
-    	"message": "moodreq"
-	}, function(data, status) {
-		console.log("Response from server: " + data);			// test
-		updateMood(data)										// update global variable with mood retrieved from server
-		updateUI();												// update UI due to mood change
-	});
-	
 }	// end window.onload 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -108,7 +99,36 @@ $(".dismissFeedback").click(function(){
 	  $("#div_feedback").hide();
 });
 
-function updateUI() {
+// MQTT onConnect
+function onConnect() {
+    // Once a connection has been made, make a subscription and send a message.
+    console.log("Connected to MQTT broker!");
+    mqttClient.subscribe(mqtt_mood);
+    console.log("Subscribed to all topics!");
+    
+    // Fetch mood from server via MQTT
+    var message = new Paho.MQTT.Message("moodreq");
+    message.destinationName = mqtt_mood;
+    mqttClient.send(message); // publish message
+    
+}
+
+// MQTT onMessageArrived
+function onMessageArrived(message){
+	
+	if(message.destinationName == mqtt_mood && message.payloadString != "moodreq"){
+
+		console.log("Response from server: " + message.payloadString);			// test
+		updateMood(message.payloadString);										// update global variable with mood retrieved from server
+		updateLauncherUI();												// update UI due to mood change
+		updateMusicUI();												// update UI due to mood change
+		
+    }
+	
+}
+
+// Update launcher UI
+function updateLauncherUI() {
 	
 	// Launcher Smiley & Message
 	var smiley_src = "";
@@ -132,6 +152,41 @@ function updateUI() {
 	}
 	$("#launcher_smiley").attr("src", smiley_src);
 	$("#laucher_message").text(launcher_message);
+	
+}
+
+// Update music player UI
+function updateMusicUI() {
+
+	var artist_name = "";
+	var song_title = "";
+	var playlist_name = "";
+	switch(current_mood) {
+	case mood.HAPPY:
+		artist_name = "Happy Artist";
+		song_title = "Happy Song";
+		playlist_name = "Happy Playlist"
+
+		break;
+	case mood.SAD:
+		artist_name = "Sad Artist";
+		song_title = "Sad Song";
+		playlist_name = "Sad Playlist"
+		break;
+	case mood.ANGRY:
+		artist_name = "Angry Artist";
+		song_title = "Angry Song";
+		playlist_name = "Angry Playlist"
+		break;
+	default: // default is happy
+		artist_name = "Happy Artist";
+		song_title = "Happy Song";
+		playlist_name = "Happy Playlist"			
+	}
+	
+	$("#div_artistname").text(artist_name);
+	$("#div_songtitle").text(song_title);
+	$("#div_playlist").text(playlist_name);
 	
 }
 

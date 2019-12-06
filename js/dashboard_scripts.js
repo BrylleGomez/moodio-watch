@@ -31,16 +31,10 @@ function init() {	// begin window.onload
 		}
 	});
 	
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~ Update UI with Mood ~~~~~~~~~~~~~~~~~~~~~~~~ */
-	
-	// Fetch mood
-	$.post(server_ip + ":" + server_port + route_reqmood, {		// post sensor values to server via jQuery post
-    	"message": "moodreq"
-	}, function(data, status) {
-		console.log("Response from server: " + data);			// test
-		updateMood(data);										// update global variable with mood retrieved from server
-		updateUI();												// update UI due to mood change
-	});
+	// Connect to MQTT
+	console.log("Attempting to Connect...");		
+    mqttClient.connect({onSuccess:onConnect});			// connect to MQTT broker
+    mqttClient.onMessageArrived = onMessageArrived;		// set message arrival callback
 
 }	// end window.onload 
 
@@ -50,6 +44,7 @@ function init() {	// begin window.onload
 ////////////////////////////// EVENT LISTENERS //////////////////////////////
 
 $("#dashboard_measure").click(function(){
+	console.log("Clicked measure!");
 	window.location.pathname = '/measure.html';
 });
 
@@ -93,6 +88,33 @@ function updateUI() {
 	$("#dashboard-header-message").text(dashboard_message);
 	$("#dashboard_smiley").attr("src", smiley_src);
 	$("#td-left-2").text(mood_text);
+	
+}
+
+// MQTT onConnect
+function onConnect() {
+    // Once a connection has been made, make a subscription and send a message.
+    console.log("Connected to MQTT broker!");
+    mqttClient.subscribe(mqtt_mood);
+    console.log("Subscribed to all topics!");
+    
+    // Fetch mood from server via MQTT
+    var message = new Paho.MQTT.Message("moodreq");
+    message.destinationName = mqtt_mood;
+    mqttClient.send(message); // publish message
+    
+}
+
+// MQTT onMessageArrived
+function onMessageArrived(message){
+	
+	if(message.destinationName == mqtt_mood && message.payloadString != "moodreq"){
+
+		console.log("Response from server: " + message.payloadString);			// test
+		updateMood(message.payloadString);										// update global variable with mood retrieved from server
+		updateUI();												// update UI due to mood change
+		
+    }
 	
 }
 

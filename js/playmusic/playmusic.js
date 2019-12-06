@@ -384,52 +384,12 @@ var app =
      * @private
      */
     
-    function updateUI() {
-
-    	var artist_name = "";
-    	var song_title = "";
-    	var playlist_name = "";
-    	switch(current_mood) {
-		case mood.HAPPY:
-			artist_name = "Happy Artist";
-			song_title = "Happy Song";
-			playlist_name = "Happy Playlist"
-
-			break;
-		case mood.SAD:
-			artist_name = "Sad Artist";
-			song_title = "Sad Song";
-			playlist_name = "Sad Playlist"
-			break;
-		case mood.ANGRY:
-			artist_name = "Angry Artist";
-			song_title = "Angry Song";
-			playlist_name = "Angry Playlist"
-			break;
-		default: // default is happy
-			artist_name = "Happy Artist";
-			song_title = "Happy Song";
-			playlist_name = "Happy Playlist"			
-    	}
-    	
-    	$("#div_artistname").text(artist_name);
-    	$("#div_songtitle").text(song_title);
-    	$("#div_playlist").text(playlist_name);
-		
-	}
-    
     function init() {
+    	
         globalPage = "main"; // Current page is "main" page.
         deviceStatus = "Device Gear"; // At first, device status is "gear" status.
         bindEvents();
-     // Fetch mood
-    	$.post(server_ip + ":" + server_port + route_reqmood, {		// post sensor values to server via jQuery post
-        	"message": "moodreq"
-    	}, function(data, status) {
-    		console.log("Response from server: " + data);			// test
-    		updateMood(data)										// update global variable with mood retrieved from server
-    		updateUI();												// update UI due to mood change
-    	});
+        
         // getcontent.refreshMusics();	// REMOVED FOR TESTING
         // initGetMusic();				// REMOVED FOR TESTING
     }
