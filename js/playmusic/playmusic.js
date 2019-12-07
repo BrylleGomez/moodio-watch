@@ -367,15 +367,15 @@ var app =
      * @private
      */
     function bindEvents() {
-        // document.addEventListener('tizenhwkey', backEventHandler);
-        document.querySelector("#div_play").addEventListener('click', controlMusic);
-        document.querySelector("#div_prev").addEventListener('click', function() {
-            startMusic("prev");
-        });
-        document.querySelector("#div_next").addEventListener('click', function() {
-            startMusic("next");
-        });
-        document.addEventListener('rotarydetent', rotaryEventHandler);
+//        // document.addEventListener('tizenhwkey', backEventHandler);
+//        document.querySelector("#div_play").addEventListener('click', controlMusic);
+//        document.querySelector("#div_prev").addEventListener('click', function() {
+//            startMusic("prev");
+//        });
+//        document.querySelector("#div_next").addEventListener('click', function() {
+//            startMusic("next");
+//        });
+//        document.addEventListener('rotarydetent', rotaryEventHandler);
     }
 
     /**

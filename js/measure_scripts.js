@@ -57,7 +57,15 @@ function init() {	// begin window.onload
 
 ////////////////////////////// EVENT LISTENERS //////////////////////////////
 
-;
+$("#measure_done").click(function(){
+	console.log("User satisfied with mood measurement!");
+	navBack();
+});
+
+$("#measure_repeat").click(function(){
+	console.log("User NOT satisfied with mood measurement!");
+	location.reload();
+});
 
 /////////////////////////////////////////////////////////////////////////////
 

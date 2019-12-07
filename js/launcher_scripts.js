@@ -89,6 +89,27 @@ $("#div_playlist").click(function(){
 	window.location.pathname = '/playlists.html';
 });
 
+$("#div_play").click(function(){
+	// send "play/pause" to MQTT topic "moodio/music"
+	var message = new Paho.MQTT.Message("play");
+    message.destinationName = mqtt_music;
+    mqttClient.send(message); // publish message
+});
+
+$("#div_next").click(function(){
+	// send "next" to MQTT topic "moodio/music"
+	var message = new Paho.MQTT.Message("next");
+    message.destinationName = mqtt_music;
+    mqttClient.send(message); // publish message
+});
+
+$("#div_prev").click(function(){
+	// send "prev" to MQTT topic "moodio/music"
+	var message = new Paho.MQTT.Message("prev");
+    message.destinationName = mqtt_music;
+    mqttClient.send(message); // publish message
+});
+
 /////////////////////////////////////////////////////////////////////////////
 
 
