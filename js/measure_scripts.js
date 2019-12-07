@@ -105,7 +105,6 @@ function onSuccessPermission() {
 	tizen.humanactivitymonitor.start('HRM', onChangedHRM);		// start reading HRM
 	lightSensor = tizen.sensorservice.getDefaultSensor('LIGHT');	// get light sensor
 	lightSensor.start(onSuccessLight);							// start reading light sensor
-	efl_util_set_window_screen_mode(win,EFL_UTIL_SCREEN_MODE_ALWAYS_ON);	// keep screen awake during measurement
 }
 
 function onErrorPermission() {
@@ -197,7 +196,6 @@ function updateUI() {
 	}
 	$("#measure_smiley").attr("src", smiley_src);
 	$("#mood_text").text(mood_text);
-	efl_util_set_window_screen_mode(win,EFL_UTIL_SCREEN_MODE_DEFAULT);	// turn off "always on" screen mode
 	
 }
 

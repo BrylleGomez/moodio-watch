@@ -46,10 +46,10 @@ function init() {	// begin window.onload
 $("#login_button").click(function(){
 	
 	// MQTT login
-	var user = "mansour";	// test
-	var pass = "12345678";	// test
-//	var user = $("#login_username").val().toString();
-//	var pass = $("#login_password").val().toString();
+//	var user = "mansour";	// test
+//	var pass = "12345678";	// test
+	var user = $("#login_username").val().toString();
+	var pass = $("#login_password").val().toString();
 	var cap = tizen.systeminfo.getCapabilities();
 	var devID = cap.duid;
 	console.log("Username: " + user);
