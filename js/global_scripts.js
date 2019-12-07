@@ -13,14 +13,15 @@
 //route_sendval = "/addsensors";
 
 // MQTT Parameters
-mqtt_broker = 'broker.hivemq.com';
+mqtt_broker_ip = 'broker.hivemq.com';	// online mosquitto broker
+mqtt_broker_port = 8000;
 mqtt_client_id = 'moodioWatch';
 mqtt_watch_login = 'moodio/login';
 mqtt_sensors_hrm = 'moodio/sensors/hrm';
 mqtt_sensors_light = 'moodio/sensors/light';
 mqtt_mood = 'moodio/mood';
 mqtt_music = 'moodio/music';
-mqttClient = new Paho.MQTT.Client(mqtt_broker, 8000, mqtt_client_id);
+mqttClient = new Paho.MQTT.Client(mqtt_broker_ip, mqtt_broker_port, mqtt_client_id);
 
 // Global user variable
 var uid = null;
