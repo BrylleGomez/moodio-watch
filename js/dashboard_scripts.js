@@ -48,6 +48,13 @@ $("#dashboard_measure").click(function(){
 	window.location.pathname = '/measure.html';
 });
 
+$("#table-logout").click(function(){
+	console.log("Clicked logout!");
+	alert("User logged out!");
+	window.location.pathname = '/login.html';
+});
+
+
 /////////////////////////////////////////////////////////////////////////////
 
 

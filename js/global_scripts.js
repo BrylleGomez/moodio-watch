@@ -22,7 +22,8 @@ mqtt_watch_login = 'moodio/login';
 mqtt_sensors_hrm = 'moodio/sensors/hrm';
 mqtt_sensors_light = 'moodio/sensors/light';
 mqtt_mood = 'moodio/mood';
-mqtt_music = 'moodio/music';
+mqtt_music_control = 'moodio/music/control';
+mqtt_music_info = 'moodio/music/info';
 mqttClient = new Paho.MQTT.Client(mqtt_broker_ip, mqtt_broker_port, mqtt_client_id);
 
 // Global user variable

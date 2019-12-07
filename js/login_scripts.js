@@ -92,6 +92,8 @@ function onMessageArrived(message){
 		} else if (message.payloadString == "false") {	// if login fail, will receive false from server
 			window.location.pathname = '/login.html';
 			alert("Login failed!");
+		} else if (message.payloadString == "registered") {	// if login fail, will receive false from server
+			alert("New watch registered!");
 		}
 		
     }

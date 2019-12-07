@@ -92,21 +92,21 @@ $("#div_playlist").click(function(){
 $("#div_play").click(function(){
 	// send "play/pause" to MQTT topic "moodio/music"
 	var message = new Paho.MQTT.Message("play");
-    message.destinationName = mqtt_music;
+    message.destinationName = mqtt_music_control;
     mqttClient.send(message); // publish message
 });
 
 $("#div_next").click(function(){
 	// send "next" to MQTT topic "moodio/music"
 	var message = new Paho.MQTT.Message("next");
-    message.destinationName = mqtt_music;
+    message.destinationName = mqtt_music_control;
     mqttClient.send(message); // publish message
 });
 
 $("#div_prev").click(function(){
 	// send "prev" to MQTT topic "moodio/music"
 	var message = new Paho.MQTT.Message("prev");
-    message.destinationName = mqtt_music;
+    message.destinationName = mqtt_music_control;
     mqttClient.send(message); // publish message
 });
 
@@ -125,6 +125,7 @@ function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
     console.log("Connected to MQTT broker!");
     mqttClient.subscribe(mqtt_mood);
+    mqttClient.subscribe(mqtt_music_info);
     console.log("Subscribed to all topics!");
     
     // Fetch mood from server via MQTT
@@ -138,11 +139,20 @@ function onConnect() {
 function onMessageArrived(message){
 	
 	if(message.destinationName == mqtt_mood && message.payloadString != "moodreq"){
-
+		
 		console.log("Response from server: " + message.payloadString);			// test
 		updateMood(message.payloadString);										// update global variable with mood retrieved from server
 		updateLauncherUI();												// update UI due to mood change
-		updateMusicUI();												// update UI due to mood change
+		
+    }
+	
+	if(message.destinationName == mqtt_music_info && message.payloadString.charAt(0) == "{"){
+		
+		console.log("Response from server: " + message.payloadString);			// test
+		var songDetails = JSON.parse(message.payloadString);
+		var songArtist = songDetails.artist;
+		var songTitle = songDetails.title;
+		updateMusicUI(songArtist, songTitle);							// update music player UI
 		
     }
 	
@@ -177,31 +187,21 @@ function updateLauncherUI() {
 }
 
 // Update music player UI
-function updateMusicUI() {
+function updateMusicUI(artist_name,song_title) {
 
-	var artist_name = "";
-	var song_title = "";
 	var playlist_name = "";
 	switch(current_mood) {
 	case mood.HAPPY:
-		artist_name = "Happy Artist";
-		song_title = "Happy Song";
 		playlist_name = "Happy Playlist"
 
 		break;
 	case mood.SAD:
-		artist_name = "Sad Artist";
-		song_title = "Sad Song";
 		playlist_name = "Sad Playlist"
 		break;
 	case mood.ANGRY:
-		artist_name = "Angry Artist";
-		song_title = "Angry Song";
 		playlist_name = "Angry Playlist"
 		break;
 	default: // default is happy
-		artist_name = "Happy Artist";
-		song_title = "Happy Song";
 		playlist_name = "Happy Playlist"			
 	}
 	

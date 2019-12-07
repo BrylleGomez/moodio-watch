@@ -72,7 +72,7 @@ function onMessageArrived(message){
 
 		console.log("Response from server: " + message.payloadString);			// test
 		updateMood(message.payloadString);										// update global variable with mood retrieved from server
-		updatePlaylistUI();												// update UI due to mood change
+		updatePlaylistUI();														// update UI due to mood change
 		
     }
 	
