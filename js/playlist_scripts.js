@@ -94,12 +94,11 @@ function updatePlaylistUI() {
 			playlist_list = ["Angry Playlist", "Beethoven & Mozart", "Inner Peace"];
 			break;
 		default: // default is happy
-		playlist_list = ["Happy Playlist", "Good Vibes Songs", "1980's Classics"];
+			playlist_list = ["Happy Playlist", "Good Vibes Songs", "1980's Classics"];
 	}
 	$("#playlist_1").text(playlist_list[0]);
 	$("#playlist_2").text(playlist_list[1]);
-	$("#playlist_3").text(playlist_list[2]);
-	$("#playlist_4").text(playlist_list[3]);
+	$("#playlist_3").text("Hehe");
 	
 }
 

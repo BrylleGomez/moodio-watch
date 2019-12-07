@@ -13,6 +13,8 @@
 //route_sendval = "/addsensors";
 
 // MQTT Parameters
+//mqtt_broker_ip = '192.168.1.112';	// local mosquitto broker
+//mqtt_broker_port = 9883;
 mqtt_broker_ip = 'broker.hivemq.com';	// online mosquitto broker
 mqtt_broker_port = 8000;
 mqtt_client_id = 'moodioWatch';
