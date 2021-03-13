@@ -24,3 +24,4 @@ The Node.js server serves as the primary backend to the IoT system. It sends and
 ### 5. Arduino (Hardware Controller)
 An Arduino UNO is used to control LED and servo motors to change house conditions based on mood information it receives from the Node.js server by subscribing to an MQTT channel. 
 
+For more information, please refer to the in-depth [code description](../master/FILENAME.docx).
