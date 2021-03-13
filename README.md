@@ -14,3 +14,6 @@ Facial recognition is done on a computer using a webcam and a deep learning [lib
 The smart watch serves two functions: (1) as a wearable user interface of the system which allows the user to view the currently detected mood, read an inspirational quote (based on the mood), start a mood detection reading (using HRM), and control the music playing at home, and (2) as a mood detector via its heart rate monitor (measuring heart rate variability or HRV). The smart watch user interface is written in JavaScript using the Tizen Web Application framework. 
 
 ![Mood.io Smart Watch UI Map](https://github.com/BrylleGomez/moodio_watch/blob/working/watch_uimap.png)
+
+### 3. Web Interface
+The web interface (as seen in the demo video, code in a separate repository) serves as the main interface of the Mood.io system. As demonstrated in the attached video, it enables the user to view current mood, weather, and inspirational quote, as well as control music and light level. 
