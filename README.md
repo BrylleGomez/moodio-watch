@@ -3,4 +3,4 @@ Mood.io is a smart home solution based on IoT technologies that detects the mood
 
 ## Demo Video
 
-[![MOOD.IO DEMO VIDEO](http://img.youtube.com/vi/lnXVw-Ndilk&t/0.jpg)](http://www.youtube.com/watch?v=lnXVw-Ndilk&t)
+[![MOOD.IO DEMO VIDEO](http://img.youtube.com/vi/lnXVw-Ndilk/0.jpg)](http://www.youtube.com/watch?v=lnXVw-Ndilk)
