@@ -7,5 +7,8 @@ Mood.io is an IoT-based smart home solution developed by myself, Danayal Khan, M
 
 ## Components
 
-### 1. Facial Recognition
-Facial recognition is done on a computer using a webcam and a deep learning [library](https://github.com/omar178/Emotion-recognition) by omar178. Within the design, the webcam is tasked to take a snapshot of the user's face and use this image to calculate a predicted mood for the user (angry, sad, or happy). 
+### 1. Camera - Facial Recognition (Mood Detector 1)
+Facial recognition is done on a computer using a webcam and a deep learning [library](https://github.com/omar178/Emotion-recognition) by omar178. Within the design, the webcam is tasked to take a snapshot of the user's face and use this image to calculate a predicted mood for the user (angry, sad, or happy).
+
+### 2. Samsung Gear S3 Frontier Smart Watch - Watch UI and Heart Rate Monitor (HRM) (Mood Detector 2)
+The smart watch serves two functions: (1) as a wearable user interface of the system which allows the user to view the currently detected mood, read an inspirational quote (based on the mood), start a mood detection reading (using HRM), and control the music playing at home.
